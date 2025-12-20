@@ -173,11 +173,11 @@ export default function Footer() {
 
                         <h4 style={{ fontSize: '14px', fontWeight: '700', color: '#fff', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Follow Us</h4>
                         <div style={{ display: 'flex', gap: '12px' }}>
-                            <a href="#" className="social-btn facebook"><FaFacebookF /></a>
-                            <a href="#" className="social-btn instagram"><FaInstagram /></a>
-                            <a href="#" className="social-btn linkedin"><FaLinkedinIn /></a>
-                            <a href="#" className="social-btn youtube"><FaYoutube /></a>
-                            <a href="#" className="social-btn twitter"><FaTwitter /></a>
+                            <a href="https://www.facebook.com/darecentreapk/" target="_blank" rel="noopener noreferrer" className="social-btn facebook"><FaFacebookF /></a>
+                            <a href="https://www.instagram.com/darecentreapk/?hl=en" target="_blank" rel="noopener noreferrer" className="social-btn instagram"><FaInstagram /></a>
+                            <a href="https://in.linkedin.com/company/durkkasacademy" target="_blank" rel="noopener noreferrer" className="social-btn linkedin"><FaLinkedinIn /></a>
+                            <a href="https://www.youtube.com/@Darecentreapk" target="_blank" rel="noopener noreferrer" className="social-btn youtube"><FaYoutube /></a>
+                            <a href="https://x.com/darecentreapk" target="_blank" rel="noopener noreferrer" className="social-btn twitter"><FaTwitter /></a>
                         </div>
                     </div>
                 </div>
