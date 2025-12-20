@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import HeroSection from '../components/HeroSection'
+import WhyChooseUs3D from '../components/WhyChooseUs3D'
 
 export default function AboutPage() {
 
@@ -254,44 +255,8 @@ export default function AboutPage() {
         description="Durkkas Academy of Research and Education (DARE) is a pioneering institution dedicated to democratizing world-class education. We bridge the gap between academic theory and industry reality, empowering learners with the specialized skills, confidence, and global exposure needed to lead in an ever-evolving digital landscape. Join our mission to transform curiosity into capability and build a future-ready career, no matter where you are."
         backgroundType="gradient"
         customMedia={
-          <div className="why-choose-us-panel about-why-panel hide-scrollbar" style={{
-            background: '#ffffff',
-            borderRadius: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
-            width: '100%',
-            height: 'fit-content',
-            overflow: 'visible'
-          }}>
-            <h3 className="why-title" style={{
-              color: '#0a1f3d',
-              fontWeight: '900',
-              letterSpacing: '1px',
-              fontSize: '20px',
-              marginBottom: '20px',
-              fontFamily: "'Arial Black', 'Arial Bold', sans-serif",
-              textTransform: 'uppercase'
-            }}>Why Choose <span style={{ color: '#DC2626' }}>Us?</span></h3>
-            <ul className="why-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              {whyChooseUs.map((item, index) => (
-                <li key={index} className="why-item" style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '16px' }}>
-                  <span className="why-icon-wrapper" style={{
-                    minWidth: '24px',
-                    marginRight: '12px',
-                    color: '#DC2626',
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginTop: '4px'
-                  }}>
-                    {item.icon}
-                  </span>
-                  <div>
-                    <h4 style={{ margin: '0 0 4px 0', fontSize: '15px', fontWeight: '800', color: '#1a3d5c' }}>{item.text}</h4>
-                    <p style={{ margin: 0, fontSize: '13px', color: '#475569', lineHeight: '1.4' }}>{item.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <div style={{ transform: 'scale(0.85)', transformOrigin: 'center center' }}>
+            <WhyChooseUs3D items={whyChooseUs} />
           </div>
         }
       />
