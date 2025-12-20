@@ -1,0 +1,335 @@
+/* =========================================
+   RESPONSIVE HYDRATION FIXES
+   ========================================= */
+
+/* Hero Section Fixes */
+.global-hero-section {
+    padding: 95px 0 30px 0;
+}
+
+.global-hero-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 30px !important;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.global-hero-left {
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.global-hero-tagline-wrapper {
+    margin-bottom: 12px !important;
+    /* Slightly reduced margin */
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+.global-hero-title {
+    margin-bottom: 15px !important;
+}
+
+.global-hero-description {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+    font-weight: 600 !important;
+    line-height: 1.8 !important;
+    color: #475569 !important;
+}
+
+.global-hero-button-container {
+    margin: 0 !important;
+    display: flex !important;
+}
+
+.global-hero-right {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    flex: 1 !important;
+    width: 100% !important;
+    align-items: center !important;
+}
+
+@media (max-width: 1024px) {
+    .global-hero-section {
+        padding: 85px 0 30px 0 !important;
+    }
+
+    .global-hero-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .global-hero-left {
+        text-align: center !important;
+    }
+
+    .global-hero-tagline-wrapper {
+        margin-bottom: 10px !important;
+        justify-content: center !important;
+    }
+
+    .global-hero-description {
+        font-size: 16px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .global-hero-button-container {
+        margin: 0 auto !important;
+        justify-content: center !important;
+    }
+
+    .global-hero-right {
+        gap: 24px !important;
+    }
+}
+
+/* About Us Page Fixes */
+.about-why-panel {
+    padding: 32px !important;
+}
+
+.about-impact-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 24px !important;
+}
+
+.about-faq-title {
+    font-size: 48px !important;
+}
+
+@media (max-width: 768px) {
+    .about-why-panel {
+        padding: 24px !important;
+    }
+
+    .about-impact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-faq-title {
+        font-size: 32px !important;
+    }
+}
+
+/* Divisions Page Fixes */
+.school-overhaul-section {
+    padding: 20px 0;
+}
+
+.school-details-container {
+    padding: 0 32px;
+}
+
+.school-details-info-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.school-title-main {
+    font-size: 36px;
+}
+
+.school-tagline-main {
+    font-size: 14px;
+}
+
+.school-desc-main {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.school-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.school-image-panel-wrapper {
+    flex: 0.8;
+}
+
+@media (max-width: 768px) {
+    .school-overhaul-section {
+        padding: 10px 0 !important;
+    }
+
+    .school-details-container {
+        padding: 0 16px !important;
+    }
+
+    .school-details-info-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .school-title-main {
+        font-size: 28px !important;
+    }
+
+    .school-tagline-main {
+        font-size: 12px !important;
+    }
+
+    .school-desc-main {
+        font-size: 16px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .school-features-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .school-image-panel-wrapper {
+        flex: 1 !important;
+        min-width: 100% !important;
+    }
+}
+
+/* Courses Page Fixes */
+.course-section-title {
+    font-size: 28px;
+}
+
+@media (max-width: 768px) {
+    .course-section-title {
+        font-size: 22px !important;
+    }
+}
+
+/* Courses Manual Hero Fixes */
+.courses-hero-section {
+    padding: 95px 0 10px;
+}
+
+.courses-hero-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 60px !important;
+}
+
+.courses-hero-text {
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.courses-hero-tag-wrapper {
+    margin-bottom: 10px !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+@media (max-width: 768px) {
+    .courses-hero-section {
+        padding: 85px 0 10px !important;
+    }
+
+    .courses-hero-container {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+
+    .courses-hero-text {
+        text-align: center !important;
+    }
+
+    .courses-hero-tag-wrapper {
+        justify-content: center !important;
+    }
+}
+
+/* Ecosystem Sticky Card Stacking Fixes */
+.ecosystem-sticky-wrapper {
+    position: sticky;
+    margin-bottom: 60px;
+    min-height: 450px;
+    padding-top: 20px;
+}
+
+.ecosystem-sticky-wrapper:nth-child(1) {
+    top: 140px;
+}
+
+.ecosystem-sticky-wrapper:nth-child(2) {
+    top: 180px;
+}
+
+.ecosystem-sticky-wrapper:nth-child(3) {
+    top: 220px;
+}
+
+.ecosystem-sticky-wrapper:nth-child(4) {
+    top: 260px;
+}
+
+.ecosystem-sticky-wrapper:nth-child(5) {
+    top: 300px;
+}
+
+.ecosystem-card-inner {
+    flex-direction: row !important;
+    height: 450px !important;
+    border-radius: 32px !important;
+}
+
+.ecosystem-card-content {
+    padding: 48px !important;
+}
+
+.ecosystem-card-title {
+    font-size: 42px !important;
+}
+
+@media (max-width: 768px) {
+    .ecosystem-sticky-wrapper {
+        margin-bottom: 40px !important;
+        min-height: 550px !important;
+        padding-top: 10px !important;
+    }
+
+    .ecosystem-sticky-wrapper:nth-child(1) {
+        top: 80px !important;
+    }
+
+    .ecosystem-sticky-wrapper:nth-child(2) {
+        top: 100px !important;
+    }
+
+    .ecosystem-sticky-wrapper:nth-child(3) {
+        top: 120px !important;
+    }
+
+    .ecosystem-sticky-wrapper:nth-child(4) {
+        top: 140px !important;
+    }
+
+    .ecosystem-sticky-wrapper:nth-child(5) {
+        top: 160px !important;
+    }
+
+    .ecosystem-card-inner {
+        flex-direction: column-reverse !important;
+        height: auto !important;
+        border-radius: 24px !important;
+    }
+
+    .ecosystem-card-content {
+        padding: 32px 24px !important;
+    }
+
+    .ecosystem-card-title {
+        font-size: 28px !important;
+    }
+}
