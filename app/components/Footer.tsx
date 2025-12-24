@@ -110,7 +110,7 @@ export default function Footer() {
                             <li><Link href="/divisions#finance">School of Finance</Link></li>
                             <li><Link href="/divisions#business">School of Business</Link></li>
                             <li><Link href="/edukoot">Edukoot Community</Link></li>
-                            <li><Link href="/nextgen">NextGen Coders</Link></li>
+                            <li><Link href="/nextgen">NXTZEN Coders</Link></li>
                         </ul>
                     </div>
 

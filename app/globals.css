@@ -1181,6 +1181,25 @@ h6 {
   border-radius: 6px;
   border: 1px solid rgba(255, 215, 0, 0.3);
   font-family: 'Arial Black', 'Arial Bold', 'Helvetica Neue', sans-serif;
+  display: inline-block;
+  animation: taglinePop 3s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.1);
+}
+
+@keyframes taglinePop {
+
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.9;
+    text-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05) translateY(-5px);
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(220, 38, 38, 0.3);
+  }
 }
 
 .global-hero-title {
@@ -10484,10 +10503,10 @@ address {
 }
 
 /* ===================================
-   NEXTGEN CODERS PAGE STYLES - ELABORATE WITH CAROUSELS & ANIMATIONS
+   NXTZEN CODERS PAGE STYLES - ELABORATE WITH CAROUSELS & ANIMATIONS
    =================================== */
 
-/* NextGen Page Container */
+/* NXTZEN Page Container */
 .nxtzen-page {
   width: 100%;
   min-height: 100vh;
@@ -10509,14 +10528,14 @@ address {
   box-sizing: border-box;
 }
 
-/* NextGen Container */
+/* NXTZEN Container */
 .nxtzen-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* NextGen Section */
+/* NXTZEN Section */
 .nxtzen-section {
   padding: 120px 0 100px 0;
   position: relative;

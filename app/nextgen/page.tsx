@@ -91,7 +91,7 @@ const FutureCodingVisual = () => {
                     </div>
                     <div style={{ display: 'flex', gap: '15px' }}>
                         <span style={{ opacity: 0.3 }}>05</span>
-                        <p style={{ margin: '0 0 0 50px' }}>self.vision = <span style={{ color: '#98c379' }}>"NextZen"</span></p>
+                        <p style={{ margin: '0 0 0 50px' }}>self.vision = <span style={{ color: '#98c379' }}>"NXTZEN"</span></p>
                     </div>
                     <br />
                     <div style={{ display: 'flex', gap: '15px' }}>
@@ -212,7 +212,7 @@ export default function NXTZENPage() {
     const courses = [
         {
             id: 1,
-            title: 'NxtGen AI Frontend Developer',
+            title: 'NxtZen AI Frontend Developer',
             level: 1,
             color: '#12DCFA',
             batchDate: 'March 2026 - January 2027',
@@ -223,7 +223,7 @@ export default function NXTZENPage() {
         },
         {
             id: 2,
-            title: 'NxtGen AI Backend Developer',
+            title: 'NxtZen AI Backend Developer',
             level: 2,
             color: '#204572',
             batchDate: 'March 2026 - January 2027',
@@ -234,7 +234,7 @@ export default function NXTZENPage() {
         },
         {
             id: 3,
-            title: 'NxtGen AI Software Architect',
+            title: 'NxtZen AI Software Architect',
             level: 3,
             color: '#0EA5C0',
             batchDate: 'March 2026 - January 2027',
@@ -245,7 +245,7 @@ export default function NXTZENPage() {
         },
         {
             id: 4,
-            title: 'NxtGen AI FullStack Developer',
+            title: 'NxtZen AI FullStack Developer',
             level: 4,
             color: '#12DCFA',
             batchDate: 'March 2026 - January 2027',
@@ -272,8 +272,8 @@ export default function NXTZENPage() {
             {/* Hero Section */}
             <HeroSection
                 tagline="LEARN. CODE. AUTOMATE."
-                title="NextZen Coders. <span style='color: #dc2626'>Build</span> the Future."
-                description="Step into the future of software engineering with NxtGen Coders. We go beyond traditional coding by integrating AI-powered development, intelligent automation, and scalable architecture into your learning path. Master the latest tech stacks, leverage AI copilots for 10x productivity, and apply our proprietary Durkkas Business Framework (DBF) to build real-world solutions that matter."
+                title="NXTZEN Coders. <span style='color: #dc2626'>Build</span> the Future."
+                description="Step into the future of software engineering with NXTZEN Coders. We go beyond traditional coding by integrating AI-powered development, intelligent automation, and scalable architecture into your learning path. Master the latest tech stacks, leverage AI copilots for 10x productivity, and apply our proprietary Durkkas Business Framework (DBF) to build real-world solutions that matter."
                 buttonText="Explore Courses"
                 buttonAction={() => document.querySelector('.courses-section')?.scrollIntoView({ behavior: 'smooth' })}
                 customMedia={<FutureCodingVisual />}
@@ -473,7 +473,7 @@ export default function NXTZENPage() {
                             textTransform: 'uppercase',
                             letterSpacing: '1px'
                         }}>
-                            <span style={{ color: '#204572' }}>NextGen</span> <span style={{ color: '#12DCFA' }}>Courses</span>
+                            <span style={{ color: '#204572' }}>NXTZEN</span> <span style={{ color: '#12DCFA' }}>Courses</span>
                         </h2>
                         <p style={{ fontSize: '18px', color: '#475569', fontWeight: '500', maxWidth: '600px', margin: '0 auto' }}>
                             Master the technologies of tomorrow with our industry-aligned curriculum designed for future innovators.

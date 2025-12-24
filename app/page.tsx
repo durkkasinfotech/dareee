@@ -43,12 +43,12 @@ const HomeHeroVisual = () => {
           </div>
         </div>
 
-        {/* 4. NextGen (Bottom-Right - 135°) */}
+        {/* 4. NXTZEN (Bottom-Right - 135°) */}
         <div className="orbit-item item-135">
           <div className="float-card counter-rotate nextgen-card">
             <div className="card-icon nextgen-icon"><FaRocket size={20} /></div>
             <div className="card-tag nextgen-tag">FUTURE</div>
-            <div className="card-title">NextGen</div>
+            <div className="card-title">NXTZEN</div>
           </div>
         </div>
 
@@ -103,8 +103,8 @@ const HomeHeroVisual = () => {
 
       <style jsx>{`
                 @keyframes popInOut {
-                    0%, 100% { transform: scale(1); }
-                    50% { transform: scale(1.05); }
+                    0%, 100% { transform: scale(1) translateY(0); opacity: 0.9; }
+                    50% { transform: scale(1.08) translateY(-8px); opacity: 1; }
                 }
 
                 .hero-visual-wrapper {
@@ -985,7 +985,7 @@ export default function Home() {
               {
                 id: 'nxtgen',
                 title: 'NXTZEN Coders',
-                subtitle: 'NEXT-GEN AI TRACKS',
+                subtitle: 'NXT-ZEN AI TRACKS',
                 description: 'Cutting-edge AI development pathways. Master full-stack engineering, AI-assisted coding, and automation with industry-leading experts and modern tech stacks.',
                 image: '/nxtzen-hero.png',
                 link: '/nextgen'
