@@ -244,6 +244,128 @@ export default function AboutPage() {
         }
         .bg-shape-1 { background: var(--primary-blue); width: 300px; height: 300px; top: 10%; left: -50px; }
         .bg-shape-2 { background: var(--secondary-blue); width: 400px; height: 400px; bottom: 10%; right: -100px; }
+
+        /* Creative Sections Styles */
+        .mv-creative-container, .impact-creative-container {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 32px;
+        }
+
+        .mission-vision-creative-section {
+          position: relative;
+          z-index: 1;
+        }
+
+        .mv-cards-container {
+          display: grid;
+          gap: 40px;
+          margin-top: 40px;
+        }
+
+        .mv-creative-card {
+          padding: 40px;
+          border-radius: 24px;
+          background: #ffffff;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+          transition: all 0.3s ease;
+        }
+
+        .mission-style {
+          border: 1px solid rgba(18, 220, 250, 0.2);
+        }
+
+        .vision-style {
+          border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .impact-creative-section {
+          background: #ffffff;
+          padding: 80px 0;
+        }
+
+        .persona-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .persona-card {
+          display: flex;
+          gap: 20px;
+          padding: 24px;
+          background: #f8fafc;
+          border-radius: 16px;
+          border-left: 4px solid #204572;
+          transition: all 0.3s ease;
+        }
+
+        /* Video Showcase Specific Styles */
+        .video-showcase-container {
+          max-width: 1280px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 40px;
+          padding: 0 32px;
+        }
+
+        .video-wrapper {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+        }
+
+        .video-iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        @media (max-width: 768px) {
+          .video-showcase-container {
+            padding: 0 20px !important;
+            gap: 30px !important;
+          }
+
+          .video-content-left {
+            min-width: 100% !important;
+            padding: 0 !important;
+          }
+
+          .video-player-right {
+            min-width: 100% !important;
+            padding: 0 !important;
+          }
+
+          .video-section-title {
+            font-size: 28px !important;
+          }
+
+          .impact-creative-container {
+            padding: 0 20px !important;
+            gap: 40px !important;
+          }
+
+          .impact-column {
+            padding: 30px 20px !important;
+          }
+
+          .impact-title {
+            font-size: 26px !important;
+          }
+
+          .manifesto-heading {
+            font-size: 20px !important;
+          }
+
+          .manifesto-text {
+            font-size: 15px !important;
+          }
+        }
       `}</style>
 
       {/* Top Header - Blue Bar */}
@@ -265,7 +387,7 @@ export default function AboutPage() {
 
       {/* Professional Video Showcase Section - REVAMPED */}
       <section className="professional-video-section" style={{ padding: '40px 0', background: '#ffffff' }}>
-        <div className="video-showcase-container animate-on-scroll" style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '40px' }}>
+        <div className="video-showcase-container" style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '40px' }}>
 
           <div className="video-content-left" style={{ flex: '1', minWidth: '350px', padding: '0 20px' }}>
             <div className="video-section-header" style={{ marginBottom: '30px' }}>
@@ -335,7 +457,7 @@ export default function AboutPage() {
       }}>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.6, background: 'radial-gradient(circle at 70% 30%, rgba(18, 220, 250, 0.15) 0%, transparent 60%)' }}></div>
 
-        <div className="mv-creative-container animate-on-scroll" style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto', padding: '0 32px' }}>
+        <div className="mv-creative-container" style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto', padding: '0 32px' }}>
 
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <h2 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '16px', color: '#0a1f3d' }}>Driven By Purpose</h2>
@@ -345,32 +467,88 @@ export default function AboutPage() {
           <div className="mv-cards-container" style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '40px' }}>
             {/* Mission Card */}
             <div className="mv-creative-card mission-style scale-up-anim" style={{
-              background: '#ffffff', borderRadius: '24px', padding: '40px',
-              border: '1px solid rgba(18, 220, 250, 0.2)',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.05)'
+              background: 'linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)',
+              borderRadius: '24px',
+              padding: '40px',
+              border: '2px solid rgba(18, 220, 250, 0.3)',
+              boxShadow: '0 20px 60px rgba(18, 220, 250, 0.15)',
+              position: 'relative',
+              overflow: 'hidden'
             }}>
-              <div style={{ fontSize: '40px', marginBottom: '20px', color: '#12DCFA' }}>🚀</div>
-              <h3 className="mv-card-title" style={{ fontSize: '28px', fontWeight: '800', marginBottom: '16px', color: '#0a1f3d' }}>Our Mission</h3>
-              <p className="mv-card-text" style={{ fontSize: '16px', lineHeight: '1.7', color: '#475569' }}>
-                To transform curiosity into capability by combining world-class education, advanced technology,
-                and hands-on innovation. We build a unified platform for communication, financial literacy,
-                and business readiness.
-              </p>
+              <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'rgba(18, 220, 250, 0.1)', borderRadius: '50%', filter: 'blur(40px)' }}></div>
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{
+                  fontSize: '48px',
+                  marginBottom: '20px',
+                  background: 'linear-gradient(135deg, #12DCFA, #0EA5C0)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  display: 'inline-block'
+                }}>🚀</div>
+                <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #12DCFA, #0EA5C0)', marginBottom: '20px', borderRadius: '2px' }}></div>
+                <h3 className="mv-card-title" style={{ fontSize: '28px', fontWeight: '900', marginBottom: '16px', color: '#0a1f3d', letterSpacing: '-0.5px' }}>Our Mission</h3>
+                <p className="mv-card-text" style={{ fontSize: '16px', lineHeight: '1.8', color: '#475569', marginBottom: '24px' }}>
+                  To transform curiosity into capability by combining world-class education, advanced technology,
+                  and hands-on innovation. We build a unified platform for communication, financial literacy,
+                  and business readiness.
+                </p>
+                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                  {['Innovation', 'Excellence', 'Impact'].map((tag, i) => (
+                    <span key={i} style={{
+                      padding: '6px 14px',
+                      background: 'rgba(18, 220, 250, 0.1)',
+                      color: '#0EA5C0',
+                      borderRadius: '20px',
+                      fontSize: '12px',
+                      fontWeight: '700',
+                      border: '1px solid rgba(18, 220, 250, 0.2)'
+                    }}>{tag}</span>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Vision Card */}
             <div className="mv-creative-card vision-style scale-up-anim" style={{
-              background: '#ffffff', borderRadius: '24px', padding: '40px',
-              border: '1px solid rgba(220, 38, 38, 0.2)',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.05)'
+              background: 'linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)',
+              borderRadius: '24px',
+              padding: '40px',
+              border: '2px solid rgba(220, 38, 38, 0.3)',
+              boxShadow: '0 20px 60px rgba(220, 38, 38, 0.15)',
+              position: 'relative',
+              overflow: 'hidden'
             }}>
-              <div style={{ fontSize: '40px', marginBottom: '20px', color: '#DC2626' }}>👁️</div>
-              <h3 className="mv-card-title" style={{ fontSize: '28px', fontWeight: '800', marginBottom: '16px', color: '#0a1f3d' }}>Our Vision</h3>
-              <p className="mv-card-text" style={{ fontSize: '16px', lineHeight: '1.7', color: '#475569' }}>
-                To become the mostly trusted learning ecosystem for emerging cities.
-                We enable learners to compete globally through accessible, structured,
-                and innovation-driven education that knows no boundaries.
-              </p>
+              <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'rgba(220, 38, 38, 0.1)', borderRadius: '50%', filter: 'blur(40px)' }}></div>
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{
+                  fontSize: '48px',
+                  marginBottom: '20px',
+                  background: 'linear-gradient(135deg, #DC2626, #991b1b)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  display: 'inline-block'
+                }}>👁️</div>
+                <div style={{ width: '60px', height: '4px', background: 'linear-gradient(90deg, #DC2626, #991b1b)', marginBottom: '20px', borderRadius: '2px' }}></div>
+                <h3 className="mv-card-title" style={{ fontSize: '28px', fontWeight: '900', marginBottom: '16px', color: '#0a1f3d', letterSpacing: '-0.5px' }}>Our Vision</h3>
+                <p className="mv-card-text" style={{ fontSize: '16px', lineHeight: '1.8', color: '#475569', marginBottom: '24px' }}>
+                  To become the mostly trusted learning ecosystem for emerging cities.
+                  We enable learners to compete globally through accessible, structured,
+                  and innovation-driven education that knows no boundaries.
+                </p>
+                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                  {['Global', 'Accessible', 'Trusted'].map((tag, i) => (
+                    <span key={i} style={{
+                      padding: '6px 14px',
+                      background: 'rgba(220, 38, 38, 0.1)',
+                      color: '#DC2626',
+                      borderRadius: '20px',
+                      fontSize: '12px',
+                      fontWeight: '700',
+                      border: '1px solid rgba(220, 38, 38, 0.2)'
+                    }}>{tag}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -379,8 +557,8 @@ export default function AboutPage() {
       {/* Frameworks Section Removed */}
 
       {/* Impact & Audience Section - MODERN SPLIT */}
-      <section className="impact-creative-section" style={{ background: '#ffffff', padding: '40px 0' }}>
-        <div className="impact-creative-container animate-on-scroll" style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '60px', padding: '0 32px' }}>
+      <section className="impact-creative-section" style={{ background: '#ffffff', padding: '80px 0' }}>
+        <div className="impact-creative-container" style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '60px', padding: '0 32px' }}>
 
           {/* Column 1: Who We Empower */}
           <div className="impact-column learners-column">

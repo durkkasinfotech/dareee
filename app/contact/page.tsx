@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { FaPhone, FaMobileAlt, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter } from 'react-icons/fa'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -151,17 +151,30 @@ export default function ContactPage() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
 
-                  {/* Phone */}
+                  {/* Mobile */}
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                     <div style={{
                       minWidth: '40px', height: '40px', borderRadius: '10px', background: '#eff6ff',
                       color: '#2563eb', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px'
                     }}>
-                      <FaPhone />
+                      <FaMobileAlt />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#1e293b', marginBottom: '4px' }}>Phone</h3>
+                      <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#1e293b', marginBottom: '4px' }}>Mobile</h3>
                       <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5' }}>+91 78128 76787</p>
+                    </div>
+                  </div>
+
+                  {/* Landline */}
+                  <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                    <div style={{
+                      minWidth: '40px', height: '40px', borderRadius: '10px', background: '#ecfdf5',
+                      color: '#059669', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px'
+                    }}>
+                      <FaPhone style={{ transform: 'scaleX(-1)' }} />
+                    </div>
+                    <div>
+                      <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#1e293b', marginBottom: '4px' }}>Landline</h3>
                       <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5' }}>04566 359495</p>
                     </div>
                   </div>
@@ -190,11 +203,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#1e293b', marginBottom: '4px' }}>Visit Us</h3>
-                      <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5' }}>
-                        Durkkas Academy of Research and Education,<br />
+                      <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5', textAlign: 'justify' }}>
+                        DURKKAS ACADEMY OF RESEARCH AND EDUCATION,<br />
                         58/2, MDR Nagar North, SBK College Road,<br />
-                        Aruppukottai - 626101.<br />
-                        Virudhunagar District, Tamilnadu
+                        Aruppukottai<br />
+                        Virudhunagar  626101
                       </p>
                     </div>
                   </div>
@@ -209,8 +222,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#1e293b', marginBottom: '4px' }}>Working Hours</h3>
-                      <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5' }}>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                      <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5' }}>Saturday: 9:00 AM - 4:00 PM</p>
+                      <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5' }}>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                      <p style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.5' }}>Sunday: 9:00 AM - 4:00 PM</p>
                     </div>
                   </div>
 
@@ -219,8 +232,14 @@ export default function ContactPage() {
                 {/* Social Links */}
                 <div style={{ marginTop: '30px', paddingTop: '24px', borderTop: '1px solid #e2e8f0' }}>
                   <div style={{ display: 'flex', gap: '12px' }}>
-                    {[FaFacebook, FaInstagram, FaLinkedin, FaYoutube].map((Icon, idx) => (
-                      <a key={idx} href="#" style={{
+                    {[
+                      { icon: FaFacebookF, url: 'https://www.facebook.com/darecentreapk/' },
+                      { icon: FaInstagram, url: 'https://www.instagram.com/darecentreapk/?hl=en' },
+                      { icon: FaLinkedinIn, url: 'https://in.linkedin.com/company/durkkasacademy' },
+                      { icon: FaYoutube, url: 'https://www.youtube.com/@Darecentreapk' },
+                      { icon: FaTwitter, url: 'https://x.com/darecentreapk' }
+                    ].map((platform, idx) => (
+                      <a key={idx} href={platform.url} target="_blank" rel="noopener noreferrer" style={{
                         width: '36px', height: '36px', borderRadius: '8px', border: '1px solid #e2e8f0',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b',
                         transition: 'all 0.2s', background: '#fff'
@@ -236,7 +255,7 @@ export default function ContactPage() {
                           e.currentTarget.style.background = '#fff'
                         }}
                       >
-                        <Icon size={14} />
+                        <platform.icon size={14} />
                       </a>
                     ))}
                   </div>
@@ -346,7 +365,6 @@ export default function ContactPage() {
                         <option value="admissions">Admissions</option>
                         <option value="workshop">Workshops</option>
                         <option value="internship">Internships</option>
-                        <option value="campus_visit">Campus Visit</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -371,13 +389,6 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Campus Visit Checkbox */}
-                  <div style={{ marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <input type="checkbox" id="tour" style={{ width: '16px', height: '16px', accentColor: '#204572' }} />
-                    <label htmlFor="tour" style={{ fontSize: '14px', color: '#475569', fontWeight: '500', cursor: 'pointer' }}>
-                      I am interested in scheduling a campus tour
-                    </label>
-                  </div>
 
                   <button
                     type="submit"

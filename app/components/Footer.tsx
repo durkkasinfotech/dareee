@@ -70,8 +70,8 @@ export default function Footer() {
                                     />
                                 </div>
                                 <div>
-                                    <h2 style={{ fontSize: '24px', fontWeight: '900', color: '#fff', lineHeight: 1, margin: 0 }}>DARE CENTRE</h2>
-                                    <span style={{ fontSize: '11px', color: '#ffffff', letterSpacing: '1px' }}>DURKKAS ACADEMY</span>
+                                    <h2 style={{ fontSize: '18px', fontWeight: '900', color: '#fff', lineHeight: 1.2, margin: 0 }}>DURKKAS ACADEMY OF <br />RESEARCH AND EDUCATION</h2>
+                                    <span style={{ fontSize: '11px', color: '#ffffff', letterSpacing: '2px', fontWeight: '700' }}>DARE CENTRE</span>
                                 </div>
                             </div>
                         </Link>
@@ -83,11 +83,11 @@ export default function Footer() {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                                 <FaMapMarkerAlt style={{ color: '#12DCFA', marginTop: '4px', flexShrink: 0 }} />
-                                <span style={{ fontSize: '14px' }}>
-                                    Durkkas Academy of Research and Education,<br />
+                                <span style={{ fontSize: '14px', textAlign: 'justify', display: 'block' }}>
+                                    DURKKAS ACADEMY OF RESEARCH AND EDUCATION,<br />
                                     58/2, MDR Nagar North, SBK College Road,<br />
-                                    Aruppukottai - 626101.<br />
-                                    Virudhunagar District, Tamilnadu
+                                    Aruppukottai<br />
+                                    Virudhunagar  626101
                                 </span>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -122,8 +122,8 @@ export default function Footer() {
                             <li><Link href="/internship">Internships</Link></li>
                             <li><Link href="/workshop">Workshops</Link></li>
                             <li><a href="https://event.darecentre.in" target="_blank" rel="noopener noreferrer">Events</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#testimonial">Testimonials</a></li>
+                            <li><Link href="/gallery">Gallery</Link></li>
+                            <li><Link href="/testimonials">Testimonials</Link></li>
                             <li><a href="https://cv.darecentre.in" target="_blank" rel="noopener noreferrer">Verify Certificate</a></li>
                             <li><Link href="/contact">Contact Us</Link></li>
                         </ul>
@@ -194,7 +194,7 @@ export default function Footer() {
                 }}>
                     <div style={{ fontSize: '14px', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                         <div>
-                            © {currentYear} DARE Centre. All rights reserved. A <span style={{ color: '#fff' }}>DURKKAS Group</span> Initiative.
+                            © {currentYear} DURKKAS ACADEMY OF RESEARCH AND EDUCATION. All rights reserved. A <span style={{ color: '#fff' }}>DURKKAS Group</span> Initiative.
                         </div>
                         <div style={{ display: 'flex', gap: '16px', fontSize: '13px' }}>
                             <Link href="/privacy-policy" style={{ color: '#ffffff', textDecoration: 'none' }}>Privacy Policy</Link>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaLightbulb, FaUsers, FaRocket, FaGraduationCap, FaHandshake, FaComments, FaProjectDiagram, FaUserTie, FaCalendarAlt, FaCheckCircle, FaArrowRight, FaClock, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import HeroSection from '../components/HeroSection'
+import CommunityOrbit from '../components/CommunityOrbit'
 
 export default function EdukootPage() {
     const [activeDesk, setActiveDesk] = useState<string | null>(null)
@@ -124,8 +125,9 @@ export default function EdukootPage() {
                     const element = document.querySelector('.desks-section');
                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }}
-                imageSrc="/edu-crop.png"
-                imageAlt="Edukoot Community"
+                customMedia={
+                    <CommunityOrbit />
+                }
                 backgroundType="gradient"
             />
 

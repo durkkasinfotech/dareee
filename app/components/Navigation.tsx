@@ -18,7 +18,11 @@ import {
     FaGraduationCap,
     FaBriefcase,
     FaCalendarAlt,
-    FaCertificate
+    FaCertificate,
+    FaRobot,
+    FaChartLine,
+    FaBusinessTime,
+    FaGlobe
 } from 'react-icons/fa'
 
 export default function Navigation() {
@@ -88,10 +92,18 @@ export default function Navigation() {
                             </Link>
                             <div className={styles.dropdownMenu}>
                                 <div className={styles.dropdownTriangle}></div>
-                                <Link href="/divisions#ai-robotics" className={styles.dropdownItem}>School of AI & Robotics</Link>
-                                <Link href="/divisions#finance" className={styles.dropdownItem}>School of Finance</Link>
-                                <Link href="/divisions#business" className={styles.dropdownItem}>School of Business</Link>
-                                <Link href="/divisions#languages" className={styles.dropdownItem}>School of Languages</Link>
+                                <Link href="/divisions#ai-robotics" className={styles.dropdownItem}>
+                                    <FaRobot className={styles.subIcon} style={{ color: '#dc2626' }} /> School of AI & Robotics
+                                </Link>
+                                <Link href="/divisions#finance" className={styles.dropdownItem}>
+                                    <FaChartLine className={styles.subIcon} style={{ color: '#16a34a' }} /> School of Finance
+                                </Link>
+                                <Link href="/divisions#business" className={styles.dropdownItem}>
+                                    <FaBusinessTime className={styles.subIcon} style={{ color: '#2563eb' }} /> School of Business
+                                </Link>
+                                <Link href="/divisions#languages" className={styles.dropdownItem}>
+                                    <FaGlobe className={styles.subIcon} style={{ color: '#9333ea' }} /> School of Languages
+                                </Link>
                             </div>
                         </div>
 
@@ -102,7 +114,7 @@ export default function Navigation() {
 
                         <div className={styles.dropdown}>
                             <div className={`${styles.navLink} ${styles.dropdownTrigger}`}>
-                                <span>Resources</span>
+                                <span>Others</span>
                                 <FaChevronDown className={styles.dropdownArrow} />
                             </div>
                             <div className={styles.dropdownMenu}>
@@ -165,10 +177,18 @@ export default function Navigation() {
                             </div>
                         </div>
                         <div className={`${styles.mobileDropdownContent} ${divisionsOpen ? styles.open : ''}`}>
-                            <Link href="/divisions#ai-robotics" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>AI & Robotics</Link>
-                            <Link href="/divisions#finance" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>Finance</Link>
-                            <Link href="/divisions#business" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>Business</Link>
-                            <Link href="/divisions#languages" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>Languages</Link>
+                            <Link href="/divisions#ai-robotics" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>
+                                <FaRobot className={styles.subIcon} /> AI & Robotics
+                            </Link>
+                            <Link href="/divisions#finance" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>
+                                <FaChartLine className={styles.subIcon} /> Finance
+                            </Link>
+                            <Link href="/divisions#business" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>
+                                <FaBusinessTime className={styles.subIcon} /> Business
+                            </Link>
+                            <Link href="/divisions#languages" className={styles.mobileSubLink} onClick={() => setMobileMenuOpen(false)}>
+                                <FaGlobe className={styles.subIcon} /> Languages
+                            </Link>
                         </div>
                     </div>
 
@@ -188,7 +208,7 @@ export default function Navigation() {
                         <div className={styles.mobileDropdownHeader} onClick={() => setOthersOpen(!othersOpen)}>
                             <FaGraduationCap className={styles.mobileIcon} />
                             <div className={styles.flexCenter} style={{ gap: '10px' }}>
-                                <span>Resources</span>
+                                <span>Others</span>
                                 {othersOpen ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
                             </div>
                         </div>

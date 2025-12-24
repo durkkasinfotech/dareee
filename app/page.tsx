@@ -91,7 +91,7 @@ const HomeHeroVisual = () => {
 
       {/* Fixed Central Hub */}
       <div className="pulse-center">
-        <div style={{ position: 'relative', width: '80%', height: '80%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px' }}>
           <Image
             src="/dare1.png"
             alt="DARE Centre"
@@ -102,14 +102,9 @@ const HomeHeroVisual = () => {
       </div>
 
       <style jsx>{`
-                @keyframes pop-in-out {
+                @keyframes popInOut {
                     0%, 100% { transform: scale(1); }
-                    50% { transform: scale(1.1); }
-                }
-
-                :global(.dare-centre-pop) {
-                    display: inline-block;
-                    animation: pop-in-out 2s ease-in-out infinite;
+                    50% { transform: scale(1.05); }
                 }
 
                 .hero-visual-wrapper {
@@ -221,8 +216,8 @@ const HomeHeroVisual = () => {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 100px;
-                    height: 100px;
+                    width: 130px;
+                    height: 130px;
                     background: rgba(255,255,255,0.95);
                     backdrop-filter: blur(15px);
                     border-radius: 50%;
@@ -575,8 +570,8 @@ export default function Home() {
       {/* Hero Banner */}
       <HeroSection
         tagline="AN ISO 9001:2015 CERTIFIED INSTITUTION"
-        title="DURKKAS ACADEMY OF <span style='white-space: nowrap;'><span style='color: #dc2626'>RESEARCH</span> AND <span style='color: #12DCFA'>EDUCATION</span></span><br/><span class='dare-centre-pop' style='font-size: 1.2em; color: #0a192f; font-weight: 950; margin-top: 15px; display: block; padding-left: 60px;'>DARE CENTRE</span>"
-        description="<div style='margin-bottom: 25px; font-size: clamp(16px, 1.6vw, 19px); color: #475569; font-weight: 500; line-height: 1.7; max-width: 850px; margin-left: auto; margin-right: auto;'>At DARE Centre, we bridge the gap between academic theory and industry excellence. Through our specialized schools of <span style='color: #dc2626; font-weight: 700;'>AI & Robotics</span>, <span style='color: #dc2626; font-weight: 700;'>Finance</span>, <span style='color: #dc2626; font-weight: 700;'>Business</span>, and <span style='color: #dc2626; font-weight: 700;'>Languages</span>, we provide learners with hands-on training and innovative learning frameworks designed to build confidence, capability, and a competitive global edge.</div><span style='display: flex; justify-content: center; gap: 40px; width: 100%; font-weight: 900; font-size: clamp(16px, 1.8vw, 22px); letter-spacing: 1px; margin-top: 0; text-transform: uppercase; font-family: var(--font-montserrat), sans-serif;'><span style='color: #dc2626'>Driving Innovation</span><span style='color: #1a3d5c'>Inspiring Excellence</span></span>"
+        title="DURKKAS ACADEMY OF <span style='white-space: nowrap;'><span style='color: #dc2626'>RESEARCH</span> AND <span style='color: #12DCFA'>EDUCATION</span></span><br/><span style='font-size: 0.75em; font-weight: 800; margin: 20px auto 0; display: block; letter-spacing: 4px; text-transform: uppercase; background: linear-gradient(90deg, #dc2626 0%, #204572 50%, #12DCFA 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: popInOut 3s ease-in-out infinite; line-height: 1.4; text-align: center; width: fit-content;'>EXPLORE | DISCOVER<br/>INVENT | CREATE</span>"
+        description="<div style='margin-bottom: 25px; font-size: clamp(17px, 1.8vw, 21px); color: #1e293b; font-weight: 600; line-height: 1.8; max-width: 700px; text-align: justify;'>At DURKKAS ACADEMY OF RESEARCH AND EDUCATION (DARE), we bridge the gap between academic theory and industry excellence. Through our specialized schools of <span style='color: #dc2626; font-weight: 800;'>AI & Robotics</span>, <span style='color: #dc2626; font-weight: 800;'>Finance</span>, <span style='color: #dc2626; font-weight: 800;'>Business</span>, and <span style='color: #dc2626; font-weight: 800;'>Languages</span>, we provide learners with hands-on training and innovative learning frameworks designed to build confidence, capability, and a competitive global edge.</div><span style='display: flex; justify-content: flex-start; gap: 40px; width: 100%; font-weight: 900; font-size: clamp(16px, 1.8vw, 22px); letter-spacing: 1px; margin-top: 0; text-transform: uppercase; font-family: var(--font-montserrat), sans-serif;'><span style='color: #dc2626'>Driving Innovation</span><span style='color: #1a3d5c'>Inspiring Excellence</span></span>"
         buttonText="Book Consulting Session"
         buttonAction={() => setIsConsultingModalOpen(true)}
         customMedia={<HomeHeroVisual />}
@@ -773,13 +768,13 @@ export default function Home() {
         <div className="about-main-container">
           <div className="about-intro-card">
             <div className="about-intro-content">
-              <h2 className="section-heading" style={{ textAlign: 'center' }}>DARE CENTRE</h2>
-              <h3 className="section-subheading" style={{ color: '#dc2626', textAlign: 'center' }}>Durkkas Academy of Research and Education</h3>
-              <p className="about-intro-text">
-                <strong>DARE Centre</strong> (Durkkas Academy of Research and Education), the educational division of the DURKKAS Group,
+              <h2 className="section-heading">DARE CENTRE</h2>
+              <h3 className="section-subheading" style={{ color: '#dc2626', textAlign: 'justify' }}>DURKKAS ACADEMY OF RESEARCH AND EDUCATION</h3>
+              <p className="about-intro-text" style={{ textAlign: 'justify' }}>
+                <strong>DARE Centre</strong> (DURKKAS ACADEMY OF RESEARCH AND EDUCATION), the educational division of the DURKKAS Group,
                 is committed to bringing first-tier educational opportunities to second and third-tier cities.
               </p>
-              <p className="about-intro-text">
+              <p className="about-intro-text" style={{ textAlign: 'justify' }}>
                 With ISO 9001:2015 certification, we offer structured academic programs, skill-based training,
                 technology-driven learning, and personalized mentorship that bridge the accessibility gap and
                 help learners compete at a global level.
@@ -837,6 +832,24 @@ export default function Home() {
           zIndex: 1
         }}></div>
 
+        <div style={{ textAlign: 'center', marginBottom: '50px', position: 'relative', zIndex: 2 }}>
+          <h2 style={{
+            fontSize: '32px',
+            fontWeight: '900',
+            color: '#204572',
+            marginBottom: '16px',
+            textTransform: 'uppercase',
+            letterSpacing: '2px'
+          }}>Latest Updates</h2>
+          <p style={{
+            fontSize: '18px',
+            color: '#64748b',
+            maxWidth: '600px',
+            margin: '0 auto',
+            lineHeight: '1.6'
+          }}>Stay informed with our latest announcements, news, and upcoming events.</p>
+        </div>
+
         <div className="announcements-news-container">
           {/* Announcements Panel */}
           <div className="announcement-panel">
@@ -861,9 +874,10 @@ export default function Home() {
                   </div>
                   <div className="item-content">
                     <span className="item-text" style={{ color: item.url ? '#204572' : 'inherit' }}>{item.text}</span>
-                    <div className="item-action-icon">
-                      <FaArrowRight fontSize="12px" />
-                    </div>
+                    <button className="item-action-btn">
+                      <span>{item.url ? (item.text.toLowerCase().includes('event') ? 'Register' : 'View') : 'View'}</span>
+                      <FaArrowRight fontSize="10px" />
+                    </button>
                   </div>
                 </li>
               ))}
@@ -903,9 +917,10 @@ export default function Home() {
                   </div>
                   <div className="item-content">
                     <span className="item-text" style={{ color: item.url ? '#204572' : 'inherit' }}>{item.text}</span>
-                    <div className="item-action-icon">
-                      <FaArrowRight fontSize="12px" />
-                    </div>
+                    <button className="item-action-btn">
+                      <span>{item.url ? (item.text.toLowerCase().includes('event') ? 'Register' : 'View') : 'View'}</span>
+                      <FaArrowRight fontSize="10px" />
+                    </button>
                   </div>
                 </li>
               ))}
@@ -1132,7 +1147,8 @@ export default function Home() {
                           marginBottom: '32px',
                           opacity: 0.9,
                           color: '#e2e8f0',
-                          maxWidth: '460px'
+                          maxWidth: '460px',
+                          textAlign: 'justify'
                         }}>{item.description}</p>
 
                         <button

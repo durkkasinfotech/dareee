@@ -410,11 +410,6 @@
 }
 
 /* About - Purple */
-.mobileDropdownHeader .mobileIcon {
-    color: #f59e0b;
-}
-
-/* Divisions & Resources - Amber/Orange */
 .mobileMenuLink:nth-of-type(3) .mobileIcon {
     color: #ec4899;
 }
@@ -430,10 +425,83 @@
 }
 
 /* NXTZEN - Sky */
+.mobileMenuLink:nth-of-type(6) .mobileIcon {
+    color: #f43f5e;
+}
+
+/* Contact - Rose */
+
+/* Dropdown Headers - Separate colors */
+.mobileDropdownWrapper:nth-of-type(1) .mobileDropdownHeader .mobileIcon {
+    color: #f59e0b;
+}
+
+/* Divisions - Amber */
+.mobileDropdownWrapper:nth-of-type(2) .mobileDropdownHeader .mobileIcon {
+    color: #8b5cf6;
+}
+
+/* Others - Purple */
+
+/* Sub-Icons Color Palette for ALL mobile dropdowns */
+.mobileDropdownWrapper:nth-of-type(1) .mobileDropdownContent .mobileSubLink:nth-of-type(1) .subIcon {
+    color: #dc2626;
+}
+
+/* AI icon */
+.mobileDropdownWrapper:nth-of-type(1) .mobileDropdownContent .mobileSubLink:nth-of-type(2) .subIcon {
+    color: #16a34a;
+}
+
+/* Finance icon */
+.mobileDropdownWrapper:nth-of-type(1) .mobileDropdownContent .mobileSubLink:nth-of-type(3) .subIcon {
+    color: #2563eb;
+}
+
+/* Business icon */
+.mobileDropdownWrapper:nth-of-type(1) .mobileDropdownContent .mobileSubLink:nth-of-type(4) .subIcon {
+    color: #9333ea;
+}
+
+/* Languages icon */
+
+.mobileDropdownWrapper:nth-of-type(2) .mobileDropdownContent .mobileSubLink:nth-of-type(1) .subIcon {
+    color: #3b82f6;
+}
+
+/* Gallery icon */
+.mobileDropdownWrapper:nth-of-type(2) .mobileDropdownContent .mobileSubLink:nth-of-type(2) .subIcon {
+    color: #a855f7;
+}
+
+/* Testimonials icon */
+.mobileDropdownWrapper:nth-of-type(2) .mobileDropdownContent .mobileSubLink:nth-of-type(3) .subIcon {
+    color: #22c55e;
+}
+
+/* Internship icon */
+.mobileDropdownWrapper:nth-of-type(2) .mobileDropdownContent .mobileSubLink:nth-of-type(4) .subIcon {
+    color: #f97316;
+}
+
+/* Workshop icon */
+.mobileDropdownWrapper:nth-of-type(2) .mobileDropdownContent .mobileSubLink:nth-of-type(5) .subIcon {
+    color: #ef4444;
+}
+
+/* Events icon */
+.mobileDropdownWrapper:nth-of-type(2) .mobileDropdownContent .mobileSubLink:nth-of-type(6) .subIcon {
+    color: #06b6d4;
+}
+
+/* Verify icon */
+
+/* Verify Certificate - Cyan */
 
 .subIcon {
-    font-size: 14px;
-    color: #94a3b8;
+    font-size: 18px;
+    min-width: 28px;
+    transition: all 0.2s ease;
 }
 
 /* Flex helper */

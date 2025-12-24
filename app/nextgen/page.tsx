@@ -5,10 +5,173 @@ import Image from 'next/image'
 import { FaCode, FaServer, FaSitemap, FaLaptopCode, FaClock, FaUsers, FaGraduationCap, FaCheckCircle, FaArrowRight, FaRocket, FaBrain, FaDatabase, FaCloud, FaCog, FaCalendarAlt, FaRobot, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import HeroSection from '../components/HeroSection'
 
+const FutureCodingVisual = () => {
+    return (
+        <div className="future-coding-container" style={{
+            position: 'relative',
+            width: '100%',
+            height: '450px',
+            background: '#0a1f3d',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 25px 60px rgba(18, 220, 250, 0.3)',
+            border: '2px solid rgba(18, 220, 250, 0.15)',
+            perspective: '1000px'
+        }}>
+            {/* Background Infinite Grid */}
+            <div style={{
+                position: 'absolute',
+                inset: '-100%',
+                backgroundImage: `
+                    linear-gradient(rgba(18, 220, 250, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(18, 220, 250, 0.1) 1px, transparent 1px)
+                `,
+                backgroundSize: '40px 40px',
+                transform: 'rotateX(60deg) translateY(0)',
+                animation: 'gridScroll 20s linear infinite'
+            }} />
+
+            {/* Glowing Orbs */}
+            <div style={{
+                position: 'absolute',
+                width: '300px',
+                height: '300px',
+                borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(18, 220, 250, 0.15) 0%, transparent 70%)',
+                top: '-50px',
+                right: '-50px',
+                filter: 'blur(30px)'
+            }} />
+
+            {/* Holographic Code Terminal */}
+            <div style={{
+                width: '85%',
+                height: '75%',
+                background: 'rgba(15, 23, 42, 0.85)',
+                backdropFilter: 'blur(12px)',
+                borderRadius: '20px',
+                padding: '24px',
+                border: '1px solid rgba(18, 220, 250, 0.4)',
+                fontFamily: "'Fira Code', 'JetBrains Mono', monospace",
+                fontSize: '15px',
+                color: '#12DCFA',
+                overflow: 'hidden',
+                position: 'relative',
+                zIndex: 2,
+                boxShadow: '0 0 40px rgba(18, 220, 250, 0.1), inset 0 0 20px rgba(18, 220, 250, 0.05)',
+                transform: 'rotateY(-5deg) rotateX(5deg)'
+            }}>
+                {/* Terminal Header */}
+                <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', opacity: 0.7 }}>
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }} />
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }} />
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }} />
+                    <span style={{ marginLeft: '10px', fontSize: '11px', letterSpacing: '2px', color: '#64748b', textTransform: 'uppercase' }}>nxtzen-main.py</span>
+                </div>
+
+                <div style={{ lineHeight: '1.6' }}>
+                    <div style={{ display: 'flex', gap: '15px' }}>
+                        <span style={{ opacity: 0.3 }}>01</span>
+                        <p style={{ margin: 0, fontWeight: 700 }}><span style={{ color: '#c678dd' }}>import</span> nxtzen_ai</p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '15px' }}>
+                        <span style={{ opacity: 0.3 }}>02</span>
+                        <p style={{ margin: 0 }}><span style={{ color: '#c678dd' }}>class</span> <span style={{ color: '#e5c07b' }}>FutureBuilder</span>:</p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '15px' }}>
+                        <span style={{ opacity: 0.3 }}>03</span>
+                        <p style={{ margin: '0 0 0 25px' }}><span style={{ color: '#c678dd' }}>def</span> <span style={{ color: '#61afef' }}>__init__</span>(self):</p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '15px' }}>
+                        <span style={{ opacity: 0.3 }}>04</span>
+                        <p style={{ margin: '0 0 0 50px' }}>self.mode = <span style={{ color: '#98c379' }}>"VIBE_CODING"</span></p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '15px' }}>
+                        <span style={{ opacity: 0.3 }}>05</span>
+                        <p style={{ margin: '0 0 0 50px' }}>self.vision = <span style={{ color: '#98c379' }}>"NextZen"</span></p>
+                    </div>
+                    <br />
+                    <div style={{ display: 'flex', gap: '15px' }}>
+                        <span style={{ opacity: 0.3 }}>06</span>
+                        <p style={{ margin: '0' }}><span style={{ color: '#e06c75' }}>@automate</span></p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '15px' }}>
+                        <span style={{ opacity: 0.3 }}>07</span>
+                        <p style={{ margin: '0' }}>build_future(innovation_level=<span style={{ color: '#d19a66' }}>10.0</span>)</p>
+                    </div>
+                </div>
+
+                {/* Blinking Cursor */}
+                <div style={{
+                    position: 'absolute',
+                    bottom: '40px',
+                    left: '60px',
+                    width: '10px',
+                    height: '2px',
+                    backgroundColor: '#12DCFA',
+                    animation: 'blink 1s step-end infinite'
+                }} />
+
+                {/* Scanning Light Effect */}
+                <div style={{
+                    position: 'absolute',
+                    top: '-150%',
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(to bottom, transparent, rgba(18, 220, 250, 0.15), transparent)',
+                    animation: 'scan 5s ease-in-out infinite'
+                }} />
+            </div>
+
+            {/* Floating Tech Icons / Particles */}
+            <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+                {[...Array(12)].map((_, i) => (
+                    <div key={i} style={{
+                        position: 'absolute',
+                        width: '4px',
+                        height: '4px',
+                        background: '#12DCFA',
+                        borderRadius: '50%',
+                        top: `${10 + Math.random() * 80}%`,
+                        left: `${10 + Math.random() * 80}%`,
+                        opacity: 0.4,
+                        boxShadow: '0 0 10px #12DCFA',
+                        animation: `float ${3 + Math.random() * 4}s ease-in-out infinite alternate`,
+                        animationDelay: `${i * 0.2}s`
+                    }} />
+                ))}
+            </div>
+
+            <style jsx>{`
+                @keyframes gridScroll {
+                    from { transform: rotateX(60deg) translateY(0); }
+                    to { transform: rotateX(60deg) translateY(40px); }
+                }
+                @keyframes scan {
+                    0% { top: -100%; }
+                    100% { top: 120%; }
+                }
+                @keyframes blink {
+                    50% { opacity: 0; }
+                }
+                @keyframes float {
+                    from { transform: translate(0, 0); }
+                    to { transform: translate(${Math.random() * 30 - 15}px, ${Math.random() * 30 - 15}px); }
+                }
+            `}</style>
+        </div>
+    )
+}
+
 export default function NXTZENPage() {
     const [isMobile, setIsMobile] = useState(false)
     const [selectedCourse, setSelectedCourse] = useState<typeof courses[0] | null>(null)
     const [showCourseModal, setShowCourseModal] = useState(false)
+    const [activeSlide, setActiveSlide] = useState(0)
     const scrollContainerRef = useRef<HTMLDivElement>(null)
 
     const scroll = (direction: 'left' | 'right') => {
@@ -25,6 +188,17 @@ export default function NXTZENPage() {
             })
         }
     }
+    const handleScroll = () => {
+        if (scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const scrollLeft = container.scrollLeft;
+            const containerWidth = container.offsetWidth;
+            const newIndex = Math.round(scrollLeft / (containerWidth * 0.9));
+            if (newIndex !== activeSlide) {
+                setActiveSlide(newIndex);
+            }
+        }
+    };
 
     useEffect(() => {
         const checkMobile = () => {
@@ -78,7 +252,7 @@ export default function NXTZENPage() {
             schedule: 'Mon-Fri (10 AM - 1 PM) • Sat-Sun (9 AM - 12 PM)',
             eligibility: 'For Advanced Level',
             icon: FaLaptopCode,
-            image: 'https://images.unsplash.com/photo-1537432376769-00a0197c889c?w=800&q=80'
+            image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80'
         }
     ]
 
@@ -102,8 +276,7 @@ export default function NXTZENPage() {
                 description="Step into the future of software engineering with NxtGen Coders. We go beyond traditional coding by integrating AI-powered development, intelligent automation, and scalable architecture into your learning path. Master the latest tech stacks, leverage AI copilots for 10x productivity, and apply our proprietary Durkkas Business Framework (DBF) to build real-world solutions that matter."
                 buttonText="Explore Courses"
                 buttonAction={() => document.querySelector('.courses-section')?.scrollIntoView({ behavior: 'smooth' })}
-                imageSrc="/nxtzen-logo.JPG"
-                imageAlt="NextZen Logo"
+                customMedia={<FutureCodingVisual />}
                 backgroundType="gradient"
             />
 
@@ -142,7 +315,7 @@ export default function NXTZENPage() {
                                 icon: FaDatabase,
                                 title: 'Data Aggregation',
                                 description: 'Data is the foundation. We teach you how to architect systems that gather, clean, and structure raw intelligence from multiple touchpoints, creating a robust data lake ready for AI processing.',
-                                color1: '#1e3a8a', color2: '#3b82f6'
+                                color1: '#1e40af', color2: '#3b82f6'
                             },
                             {
                                 step: 'Understand',
@@ -150,7 +323,7 @@ export default function NXTZENPage() {
                                 icon: FaBrain,
                                 title: 'Understand Patterns',
                                 description: 'Turn noise into signals. Using advanced ML algorithms and statistical models, we decode hidden patterns in user behavior to understand what truly drives engagement.',
-                                color1: '#1e3a8a', color2: '#2563eb'
+                                color1: '#0f766e', color2: '#14b8a6'
                             },
                             {
                                 step: 'Recommend',
@@ -158,7 +331,7 @@ export default function NXTZENPage() {
                                 icon: FaCheckCircle,
                                 title: 'Recommendation Engine',
                                 description: 'Personalization at scale. Build intelligent engines that predict user needs and generate hyper-personalized recommendations to maximize conversion rates.',
-                                color1: '#0f766e', color2: '#0d9488'
+                                color1: '#059669', color2: '#10b981'
                             },
                             {
                                 step: 'Keep',
@@ -166,7 +339,7 @@ export default function NXTZENPage() {
                                 icon: FaCloud,
                                 title: 'Keep & Retain',
                                 description: 'Retention engineering. Implement technical strategies to "Keep" the value locked in. We focus on low-latency storage and high-availability systems to ensure data sustainability.',
-                                color1: '#b45309', color2: '#d97706'
+                                color1: '#ea580c', color2: '#f97316'
                             },
                             {
                                 step: 'KPI',
@@ -174,7 +347,7 @@ export default function NXTZENPage() {
                                 icon: FaCog,
                                 title: 'KPI Optimization',
                                 description: 'Measure what matters. Define and track technical Key Performance Indicators. Learn to build real-time dashboards that visualize system health and business impact.',
-                                color1: '#be185d', color2: '#db2777'
+                                color1: '#c026d3', color2: '#d946ef'
                             },
                             {
                                 step: 'Automate',
@@ -182,7 +355,7 @@ export default function NXTZENPage() {
                                 icon: FaRocket,
                                 title: 'Automate Workflows',
                                 description: 'Efficiency through code. Deploy intelligent bots, CI/CD pipelines, and AI agents to automate repetitive tasks, freeing up human creativity for high-value problem solving.',
-                                color1: '#7e22ce', color2: '#9333ea'
+                                color1: '#7c3aed', color2: '#8b5cf6'
                             },
                             {
                                 step: 'Scale',
@@ -190,7 +363,7 @@ export default function NXTZENPage() {
                                 icon: FaSitemap,
                                 title: 'Scale Globally',
                                 description: 'Growth without limits. Architect systems built for exponential scale. from microservices to serverless, ensure your technology stack never becomes the bottleneck.',
-                                color1: '#164e63', color2: '#06b6d4'
+                                color1: '#0891b2', color2: '#06b6d4'
                             }
                         ].map((item, index) => (
                             <div
@@ -223,13 +396,14 @@ export default function NXTZENPage() {
                                     {/* Giant Letter Watermark */}
                                     <div className="dbf-letter-watermark" style={{
                                         position: 'absolute',
-                                        right: '-20px',
-                                        bottom: '-40px',
-                                        fontSize: isMobile ? '160px' : '240px',
+                                        right: isMobile ? '-10px' : '-20px',
+                                        bottom: isMobile ? '-20px' : '-30px',
+                                        fontSize: isMobile ? '180px' : '280px',
                                         fontWeight: '900',
-                                        opacity: '0.05',
+                                        opacity: '0.15',
                                         fontFamily: 'var(--font-inter), sans-serif',
-                                        pointerEvents: 'none'
+                                        pointerEvents: 'none',
+                                        lineHeight: 1
                                     }}>
                                         {item.letter}
                                     </div>
@@ -343,7 +517,7 @@ export default function NXTZENPage() {
                             </button>
                         )}
 
-                        <div className="nxt-courses-scroll-container" ref={scrollContainerRef}>
+                        <div className="nxt-courses-scroll-container" ref={scrollContainerRef} onScroll={handleScroll}>
                             {courses.map((course) => (
                                 <div
                                     key={course.id}
@@ -457,6 +631,37 @@ export default function NXTZENPage() {
                             </button>
                         )}
                     </div>
+
+                    {/* Mobile Scroll Indicator Dots */}
+                    {isMobile && (
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '20px' }}>
+                            {courses.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => {
+                                        if (scrollContainerRef.current) {
+                                            const cardWidth = scrollContainerRef.current.offsetWidth * 0.9
+                                            scrollContainerRef.current.scrollTo({
+                                                left: index * cardWidth,
+                                                behavior: 'smooth'
+                                            })
+                                        }
+                                    }}
+                                    style={{
+                                        width: activeSlide === index ? '24px' : '8px',
+                                        height: '8px',
+                                        borderRadius: '4px',
+                                        background: activeSlide === index ? '#204572' : '#cbd5e1',
+                                        border: 'none',
+                                        padding: 0,
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    aria-label={`Go to course ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 

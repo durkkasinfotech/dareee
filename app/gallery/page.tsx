@@ -25,6 +25,7 @@ const GalleryHeroVisual = () => {
                                     alt={`Gallery ${i}`}
                                     fill
                                     style={{ objectFit: 'cover' }}
+                                    priority={i < 3}
                                     className="face-img"
                                     unoptimized
                                 />
@@ -215,12 +216,12 @@ const GalleryHeroVisual = () => {
 
 export default function GalleryPage() {
     const [selectedImage, setSelectedImage] = useState<number | null>(null)
-    const [filter, setFilter] = useState<string>('all')
+    const [filter, setFilter] = useState<string>('projects')
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        // Simulate loading
-        setTimeout(() => setIsLoading(false), 500)
+        // Fast loading
+        setIsLoading(false)
     }, [])
     const [currentEventSlide, setCurrentEventSlide] = useState(0)
     const [itemsPerSlide, setItemsPerSlide] = useState(3)
@@ -313,12 +314,9 @@ export default function GalleryPage() {
         { id: 106, src: '/Robotics winter boot camp.jpg', category: 'past-events', title: 'Winter Boot Camp' },
     ]
 
-    const filteredImages = filter === 'all'
-        ? galleryImages
-        : galleryImages.filter(img => img.category === filter)
+    const filteredImages = galleryImages.filter(img => img.category === filter)
 
     const categories = [
-        { id: 'all', label: 'All', icon: '🔍' },
         { id: 'projects', label: 'Our Activities', icon: '💡' },
         { id: 'workshop', label: 'Workshops', icon: '🤖' },
         { id: 'edukoot', label: 'Edukoot', icon: '🎓' },
@@ -437,14 +435,20 @@ export default function GalleryPage() {
                                             e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.07)';
                                         }}
                                     >
-                                        <div style={{ position: 'relative', paddingTop: '141.4%', overflow: 'hidden' }}>
+                                        <div style={{
+                                            position: 'relative',
+                                            paddingTop: isMobile ? '120%' : '141.4%',
+                                            overflow: 'hidden',
+                                            background: '#f1f5f9' // Light background for contain fit
+                                        }}>
                                             <Image
                                                 src={event.src}
                                                 alt={event.title}
                                                 fill
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 style={{
-                                                    objectFit: 'cover',
+                                                    objectFit: 'contain', // Change to contain so brochures aren't cropped
+                                                    padding: isMobile ? '10px' : '0',
                                                     transition: 'transform 0.6s ease'
                                                 }}
                                                 className="event-image-zoom"
@@ -464,15 +468,16 @@ export default function GalleryPage() {
                                             }}>FEATURED</div>
                                         </div>
                                         <div style={{
-                                            padding: '25px',
+                                            padding: isMobile ? '15px' : '25px', // Reduced padding on mobile
                                             textAlign: 'center',
                                             flexGrow: 1,
                                             display: 'flex',
                                             flexDirection: 'column',
-                                            justifyContent: 'center'
+                                            justifyContent: 'center',
+                                            background: '#fff'
                                         }}>
                                             <h3 style={{
-                                                fontSize: '20px',
+                                                fontSize: isMobile ? '16px' : '20px', // Smaller font on mobile
                                                 fontWeight: '900',
                                                 color: '#1a3d5c',
                                                 margin: 0,
@@ -618,25 +623,25 @@ export default function GalleryPage() {
                         <div style={{ display: 'grid', gap: '20px' }}>
                             {[
                                 {
-                                    title: 'AI & Machine Learning Bootcamps',
-                                    date: 'Winter 2024',
-                                    count: '42 Assets',
+                                    title: 'Our Activities',
+                                    date: 'Innovation & Projects',
+                                    count: `${galleryImages.filter(img => img.category === 'projects').length} Assets`,
+                                    category: 'projects',
+                                    icon: '💡'
+                                },
+                                {
+                                    title: 'Workshops',
+                                    date: 'Hands-on Training',
+                                    count: `${galleryImages.filter(img => img.category === 'workshop').length} Assets`,
                                     category: 'workshop',
                                     icon: '🤖'
                                 },
                                 {
-                                    title: 'Creative Engineering Expo',
-                                    date: 'Fall 2024',
-                                    count: '28 Assets',
-                                    category: 'projects',
-                                    icon: '⚙️'
-                                },
-                                {
-                                    title: 'Global Speakers Forum',
-                                    date: 'Autumn 2024',
-                                    count: '15 Assets',
-                                    category: 'business',
-                                    icon: '🎤'
+                                    title: 'Edukoot Sessions',
+                                    date: 'Community Learning',
+                                    count: `${galleryImages.filter(img => img.category === 'edukoot').length} Assets`,
+                                    category: 'edukoot',
+                                    icon: '🎓'
                                 }
                             ].map((highlight, index) => (
                                 <div key={index} style={{
@@ -718,7 +723,7 @@ export default function GalleryPage() {
                                     e.currentTarget.style.boxShadow = '0 10px 25px rgba(32, 69, 114, 0.2)';
                                 }}
                             >
-                                Discover All Assets
+                                Discover Gallery
                             </button>
                         </div>
                     </div>
@@ -740,7 +745,7 @@ export default function GalleryPage() {
                                 <span className="filter-icon">{cat.icon}</span>
                                 <span className="filter-label">{cat.label}</span>
                                 <span className="filter-count">
-                                    {cat.id === 'all' ? galleryImages.length : galleryImages.filter(img => img.category === cat.id).length}
+                                    {galleryImages.filter(img => img.category === cat.id).length}
                                 </span>
                             </button>
                         ))}
@@ -757,7 +762,7 @@ export default function GalleryPage() {
                             <p>Loading gallery...</p>
                         </div>
                     ) : (
-                        <div className={`gallery-grid ${filter === 'workshop' ? 'workshop-creative-layout' : ''}`}>
+                        <div className="gallery-signature-mosaic">
                             {filteredImages.map((image, index) => (
                                 <div
                                     key={image.id}

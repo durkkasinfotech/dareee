@@ -78,30 +78,17 @@ export default function HeroSection({
               <button
                 className="global-hero-button"
                 onClick={buttonAction}
-                style={{
-                  background: 'linear-gradient(135deg, #204572 0%, #12DCFA 100%)',
-                  color: '#ffffff',
-                  padding: '12px 24px',
-                  borderRadius: '8px',
-                  fontSize: '16px',
-                  fontWeight: '700',
-                  border: 'none',
-                  cursor: 'pointer',
-                  boxShadow: '0 4px 12px rgba(32, 69, 114, 0.4)',
-                  transition: 'all 0.3s ease',
-                  width: 'fit-content'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)'
-                  e.currentTarget.style.boxShadow = '0 6px 16px rgba(32, 69, 114, 0.5)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(32, 69, 114, 0.4)'
-                }}
               >
-                {buttonText}
+                <span>{buttonText}</span>
+                <span className="btn-arrow">→</span>
               </button>
+              <style jsx>{`
+                @keyframes btnPulse {
+                  0% { box-shadow: 0 0 0 0 rgba(18, 220, 250, 0.7); }
+                  70% { box-shadow: 0 0 0 15px rgba(18, 220, 250, 0); }
+                  100% { box-shadow: 0 0 0 0 rgba(18, 220, 250, 0); }
+                }
+              `}</style>
             </div>
           )}
         </div>
@@ -114,7 +101,7 @@ export default function HeroSection({
               className="global-hero-custom-media"
               style={{
                 width: '100%',
-                maxWidth: '600px',
+                maxWidth: '700px',
                 position: 'relative',
                 zIndex: 2
               }}

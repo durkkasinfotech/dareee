@@ -1,0 +1,254 @@
+.orbitContainer {
+    --core-size: 110px;
+    --inner-ring-size: 280px;
+    --outer-ring-size: 500px;
+    --deco-ring-size: 620px;
+    --satellite-size: 68px;
+    --inner-dist: 140px;
+    --outer-dist: 250px;
+
+    position: relative;
+    width: var(--deco-ring-size);
+    height: var(--deco-ring-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    margin: 0 auto;
+    background: radial-gradient(circle at center, rgba(18, 220, 250, 0.1) 0%, transparent 75%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Mobile Responsiveness - Step-down scaling */
+@media (max-width: 1200px) {
+    .orbitContainer {
+        --core-size: 100px;
+        --inner-ring-size: 250px;
+        --outer-ring-size: 450px;
+        --deco-ring-size: 550px;
+        --satellite-size: 60px;
+        --inner-dist: 125px;
+        --outer-dist: 225px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .orbitContainer {
+        --core-size: 90px;
+        --inner-ring-size: 220px;
+        --outer-ring-size: 400px;
+        --deco-ring-size: 480px;
+        --satellite-size: 55px;
+        --inner-dist: 110px;
+        --outer-dist: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .orbitContainer {
+        --core-size: 80px;
+        --inner-ring-size: 180px;
+        --outer-ring-size: 320px;
+        --deco-ring-size: 380px;
+        --satellite-size: 50px;
+        --inner-dist: 90px;
+        --outer-dist: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .orbitContainer {
+        --core-size: 65px;
+        --inner-ring-size: 140px;
+        --outer-ring-size: 240px;
+        --deco-ring-size: 300px;
+        --satellite-size: 42px;
+        --inner-dist: 70px;
+        --outer-dist: 120px;
+    }
+}
+
+@media (max-width: 360px) {
+    .orbitContainer {
+        --core-size: 55px;
+        --inner-ring-size: 110px;
+        --outer-ring-size: 200px;
+        --deco-ring-size: 260px;
+        --satellite-size: 36px;
+        --inner-dist: 55px;
+        --outer-dist: 100px;
+    }
+}
+
+.core {
+    position: absolute;
+    width: var(--core-size);
+    height: var(--core-size);
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px rgba(18, 220, 250, 0.4), inset 0 0 20px rgba(18, 220, 250, 0.1);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    border: 1.5px dashed rgba(32, 69, 114, 0.12);
+    transition: all 0.5s ease;
+}
+
+.innerRing {
+    width: var(--inner-ring-size);
+    height: var(--inner-ring-size);
+}
+
+.outerRing {
+    width: var(--outer-ring-size);
+    height: var(--outer-ring-size);
+    border-color: rgba(220, 38, 38, 0.1);
+    border-style: dotted;
+}
+
+.decoRing {
+    width: var(--deco-ring-size);
+    height: var(--deco-ring-size);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(18, 220, 250, 0.08);
+    pointer-events: none;
+}
+
+.satellite {
+    position: absolute;
+    width: var(--satellite-size);
+    height: var(--satellite-size);
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(32, 69, 114, 0.12);
+    top: 50%;
+    left: 50%;
+    margin-top: calc(var(--satellite-size) / -2);
+    margin-left: calc(var(--satellite-size) / -2);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 2px solid white;
+}
+
+.satellite:hover {
+    transform: scale(1.25) !important;
+    box-shadow: 0 12px 25px rgba(18, 220, 250, 0.35);
+    border-color: #12DCFA;
+    z-index: 50;
+}
+
+.satelliteIcon {
+    font-size: calc(var(--satellite-size) * 0.45);
+    transition: all 0.4s ease;
+}
+
+.satellite:hover .satelliteIcon {
+    color: #12DCFA !important;
+    transform: rotate(5deg) scale(1.1);
+}
+
+.label {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffffff;
+    white-space: nowrap;
+    background: #204572;
+    padding: 5px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(32, 69, 114, 0.3);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Hide labels on small mobile */
+@media (max-width: 600px) {
+    .label {
+        display: none !important;
+    }
+}
+
+.satellite:hover .label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Base Animations */
+@keyframes rotateLeft {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateRight {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes keepUprightLeft {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes keepUprightRight {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotateLeftAnim {
+    animation: rotateLeft 35s linear infinite;
+}
+
+.rotateRightAnim {
+    animation: rotateRight 45s linear infinite;
+}
+
+.decoRotateAnim {
+    animation: rotateLeft 90s linear infinite;
+}
+
+.keepUprightLeftAnim {
+    animation: keepUprightLeft 35s linear infinite;
+}
+
+.keepUprightRightAnim {
+    animation: keepUprightRight 45s linear infinite;
+}

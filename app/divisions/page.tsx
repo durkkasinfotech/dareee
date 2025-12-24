@@ -33,13 +33,13 @@ export default function DivisionsPage() {
             id: 'finance',
             name: 'School of finance',
             tagline: 'Earn. Save. Grow. Secure.',
-            image: '/finance.jpg'
+            image: '/finance_1.png'
         },
         {
             id: 'business',
             name: 'School of business',
             tagline: 'Lead. Communicate. Strategize. Succeed.',
-            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80'
+            image: '/Business.png'
         },
         {
             id: 'languages',
@@ -299,9 +299,9 @@ export default function DivisionsPage() {
             description: 'Master the art of managing money, investments, and financial planning with DARE\'s comprehensive financial literacy curriculum. We go beyond basic budgeting to teach advanced concepts like portfolio diversification, algorithmic trading basics, risk assessment, and global economic trends. Our program acts as a bridge between academic theory and real-world wealth creation, empowering students to make informed financial decisions, understand market psychology, and secure their economic future from an early age.',
             icon: FaDollarSign,
             images: [
-                '/finance.jpg',
-                '/finance1.jpg',
-                '/finance2.jpg'
+                '/finance_1.png',
+                '/finance_2.png',
+                '/finance_3.png'
             ],
             features: [
                 'Digital Banking & FinTech Revolution - Mastering mobile banking, secure UPI transactions, digital wallets, and understanding the architecture of modern payment gateways.',
@@ -352,9 +352,9 @@ export default function DivisionsPage() {
             description: 'Prepare for the dynamic world of business with our comprehensive programs that develop essential professional skills and entrepreneurial mindset. From effective communication and leadership to digital marketing and startup fundamentals, we equip students with the knowledge and confidence to excel in corporate environments or launch their own ventures. Our curriculum combines theoretical business concepts with practical applications, case studies from real companies, and hands-on projects that simulate real-world business challenges. Students learn to think strategically, communicate professionally, lead teams effectively, and navigate the complexities of modern business operations.',
             icon: FaBriefcase,
             images: [
-                'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
-                'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
-                'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80'
+                '/Business.png',
+                '/business1.png',
+                '/business2.png'
             ],
             features: [
                 'Professional Communication Skills - Business writing, presentations, email etiquette, and interpersonal communication',
@@ -560,6 +560,13 @@ export default function DivisionsPage() {
                     transition: all 0.5s ease;
                 }
                 
+                @media (max-width: 768px) {
+                    .gateway-content {
+                        flex-direction: row !important;
+                        justify-content: flex-start !important;
+                    }
+                }
+                
                 .gateway-panel:hover .gateway-content, .gateway-panel.expanded .gateway-content {
                     justify-content: flex-end;
                     align-items: flex-start;
@@ -582,6 +589,13 @@ export default function DivisionsPage() {
                    background: rgba(255,255,255,0.3);
                    margin-bottom: 24px;
                 }
+                
+                @media (max-width: 768px) {
+                   .gateway-panel:hover .gateway-icon, .gateway-panel.expanded .gateway-icon {
+                       margin-bottom: 12px;
+                       font-size: 32px;
+                   }
+                }
 
                 .gateway-title {
                     font-size: 18px;
@@ -592,9 +606,10 @@ export default function DivisionsPage() {
                     transition: all 0.4s ease;
                     writing-mode: vertical-rl;
                     transform: rotate(180deg);
-                    height: 150px;
+                    height: 180px; /* Increased to avoid overlap */
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                 }
 
                 .gateway-panel:hover .gateway-title, .gateway-panel.expanded .gateway-title {
@@ -682,6 +697,7 @@ export default function DivisionsPage() {
                         justify-content: flex-start;
                     }
                      .gateway-panel:hover .gateway-content, .gateway-panel.expanded .gateway-content {
+                        flex-direction: column !important; /* Back to column when expanded */
                         justify-content: center;
                         align-items: flex-start;
                         padding: 20px;
@@ -713,6 +729,168 @@ export default function DivisionsPage() {
                      .gateway-panel:hover .gateway-icon, .gateway-panel.expanded .gateway-icon {
                         margin-bottom: 10px;
                      }
+                }
+
+                /* Premium Typography for School Sections */
+                .school-title-main {
+                    font-family: var(--font-montserrat), sans-serif;
+                    font-size: 42px;
+                    font-weight: 900;
+                    letter-spacing: -1.5px;
+                    color: #0a1f3d;
+                    margin: 0;
+                    line-height: 1.1;
+                }
+
+                .school-tagline-main {
+                    font-family: var(--font-inter), sans-serif;
+                    font-size: 11px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    background: #f8fafc;
+                    padding: 6px 16px;
+                    border-radius: 50px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 12px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                    border: 1px solid rgba(0,0,0,0.05);
+                }
+
+                .tagline-pulse-dot {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: currentColor;
+                    animation: taglinePulse 2s infinite;
+                }
+
+                @keyframes taglinePulse {
+                    0% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.4); opacity: 0.6; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+
+                .school-desc-main {
+                    font-family: var(--font-inter), sans-serif;
+                    font-size: 17.5px;
+                    line-height: 1.85;
+                    color: #334155;
+                    font-weight: 450;
+                    letter-spacing: -0.1px;
+                    margin-bottom: 35px;
+                    max-width: 95%;
+                    text-align: justify;
+                }
+
+                .school-feature-text {
+                    font-family: var(--font-inter), sans-serif;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #0f172a;
+                    line-height: 1.4;
+                }
+
+                .school-lang-card {
+                    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+                    padding: 24px;
+                    borderRadius: 20px;
+                    border: 1px solid #e2e8f0;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                }
+
+                .school-lang-card h4 {
+                    font-family: var(--font-montserrat), sans-serif;
+                    font-size: 18px;
+                    font-weight: 900;
+                    color: #0a1f3d;
+                    margin-bottom: 4px;
+                    letter-spacing: -0.5px;
+                }
+
+                .school-lang-level {
+                    font-family: var(--font-inter), sans-serif;
+                    font-size: 13px;
+                    color: #64748b;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 1.2px;
+                }
+
+                @media (max-width: 768px) {
+                    .school-title-main {
+                        font-size: 28px;
+                    }
+                    .school-desc-main {
+                        font-size: 15px;
+                        line-height: 1.7;
+                        text-align: center;
+                    }
+                }
+
+                .image-carousel {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .carousel-image {
+                    position: absolute;
+                    inset: 0;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 0;
+                    transition: opacity 0.8s ease-in-out, transform 1s ease-out;
+                    transform: scale(1.1);
+                }
+
+                .carousel-image.active {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+                .school-details-info-row {
+                    display: flex;
+                    gap: 60px;
+                    align-items: flex-start;
+                    width: 100%;
+                }
+
+                .school-image-panel-wrapper {
+                    flex: 0.8;
+                    position: sticky;
+                    top: 140px;
+                }
+
+                @media (max-width: 1024px) {
+                    .school-details-info-row {
+                        flex-direction: column;
+                        gap: 40px;
+                    }
+                    .school-image-panel-wrapper {
+                        width: 100%;
+                        position: static;
+                    }
+                }
+
+                .school-features-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                    margin-top: 30px;
+                }
+
+                @media (max-width: 640px) {
+                    .school-features-grid {
+                        grid-template-columns: 1fr;
+                    }
                 }
 
             `}</style>
@@ -849,12 +1027,20 @@ export default function DivisionsPage() {
                                         }}>
                                             <school.icon />
                                         </div>
-                                        <div>
-                                            <h2 className="school-title-main" style={{ fontWeight: '900', color: '#0a1f3d', margin: 0 }}>{school.name}</h2>
-                                            <p className="school-tagline-main" style={{ margin: 0, color: school.id === 'ai-robotics' ? '#dc2626' : '#64748b', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1px' }}>{school.tagline}</p>
+                                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                            <div className="school-tagline-main" style={{
+                                                color: school.id === 'ai-robotics' ? '#dc2626' :
+                                                    school.id === 'finance' ? '#204572' :
+                                                        school.id === 'business' ? '#D97706' : '#0EA5C0',
+                                                borderColor: school.id === 'business' ? 'rgba(217, 119, 6, 0.3)' : 'inherit'
+                                            }}>
+                                                <span className="tagline-pulse-dot"></span>
+                                                {school.tagline}
+                                            </div>
+                                            <h2 className="school-title-main" style={{ color: '#0a1f3d', margin: 0 }}>{school.name}</h2>
                                         </div>
                                     </div>
-                                    <p className="school-desc-main" style={{ lineHeight: '1.7', color: '#475569' }}>{school.description}</p>
+                                    <p className="school-desc-main">{school.description}</p>
 
                                     {/* Transforming Features into Colorful Cards */}
                                     <div className="school-features-grid">
@@ -869,7 +1055,7 @@ export default function DivisionsPage() {
                                                 gap: '12px'
                                             }}>
                                                 <div style={{ color: '#dc2626', marginTop: '4px' }}><FaCheckCircle /></div>
-                                                <div style={{ fontSize: '14px', fontWeight: '700', color: '#0a1f3d' }}>{feat.split(' - ')[0]}</div>
+                                                <div className="school-feature-text">{feat.split(' - ')[0]}</div>
                                             </div>
                                         ))}
                                     </div>
@@ -881,9 +1067,7 @@ export default function DivisionsPage() {
                                         position: 'relative',
                                         borderRadius: '30px',
                                         overflow: 'hidden',
-                                        aspectRatio: '16/10',
-                                        boxShadow: '0 30px 60px rgba(0,0,0,0.12)',
-                                        border: '8px solid #ffffff',
+                                        aspectRatio: isMobile ? '4/3' : '16/10',
                                         width: '100%'
                                     }}>
                                         <div className="image-carousel">
@@ -891,7 +1075,7 @@ export default function DivisionsPage() {
                                                 <div
                                                     key={index}
                                                     className={'carousel-image ' + (index === schoolImageIndex ? 'active' : '')}
-                                                    style={{ backgroundImage: 'url(' + img + ')' }}
+                                                    style={{ backgroundImage: "url('" + img + "')" }}
                                                 ></div>
                                             ))}
                                         </div>
@@ -905,7 +1089,9 @@ export default function DivisionsPage() {
                                                         height: '8px',
                                                         borderRadius: '8px',
                                                         border: 'none',
-                                                        background: '#ffffff',
+                                                        background: school.id === 'ai-robotics' ? '#dc2626' :
+                                                            school.id === 'finance' ? '#204572' :
+                                                                school.id === 'business' ? '#D97706' : '#0EA5C0',
                                                         opacity: index === schoolImageIndex ? 1 : 0.5,
                                                         transition: 'all 0.3s ease'
                                                     }}
@@ -926,19 +1112,12 @@ export default function DivisionsPage() {
                                     </div>
                                     <div className="school-features-grid" style={{ gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)' }}>
                                         {[...(school.regionalLanguages || []), ...(school.foreignLanguages || [])].map((lang, i) => (
-                                            <div key={i} style={{
-                                                background: 'linear-gradient(135deg, #ffffff 0%, #f8faff 100%)',
-                                                padding: '24px',
-                                                borderRadius: '20px',
-                                                border: '1px solid #e2e8f0',
-                                                textAlign: 'center',
-                                                transition: 'all 0.3s ease'
-                                            }}>
+                                            <div key={i} className="school-lang-card">
                                                 <div style={{ width: '48px', height: '32px', margin: '0 auto 16px', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
                                                     <img src={lang.flag} alt={lang.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                                 </div>
-                                                <h4 style={{ fontSize: '18px', fontWeight: '900', color: '#0a1f3d' }}>{lang.name}</h4>
-                                                <p style={{ fontSize: '12px', color: '#64748b' }}>
+                                                <h4>{lang.name}</h4>
+                                                <p className="school-lang-level">
                                                     {(lang as any).level || (lang as any).levels}
                                                 </p>
                                             </div>

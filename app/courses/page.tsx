@@ -22,7 +22,7 @@ interface Course {
 const roboticsCourses: Course[] = [
     {
         title: "Robotics ABC",
-        subtitle: "Class: K–2 | Age: 4-7",
+        subtitle: "Class: K–12 | Age: 4-17",
         overview: "Early exposure program introducing robotics through play-based activity-oriented learning.",
         learnings: ["Understanding machines", "Shapes & patterns", "Basic logic", "Simple sensors", "Toy robotics"],
         outcome: "Curiosity & Logical Thinking",
@@ -183,7 +183,7 @@ const businessCourses: Course[] = [
         overview: "Targeted at college students & graduates. Learn practical bookkeeping, GST, Income Tax, and real-world finance case studies.",
         learnings: ["Accounting fundamentals", "GST & Income Tax", "Practical Filing", "Case Studies"],
         outcome: "Job Readiness",
-        image: "/Finance.png",
+        image: "/finance_1.png",
         category: "Finance",
         color: "#204572",
         icon: <FaChartLine />
@@ -912,7 +912,7 @@ export default function CoursesPage() {
             <CourseSection
                 id="school-of-ai"
                 title="School of AI & Robotics"
-                desc="From play-based K-2 fundamentals to advanced industry-aligned specializations."
+                desc="From play-based K-12 fundamentals to advanced industry-aligned specializations."
                 courses={roboticsCourses}
                 sectionColor="#DC2626"
                 icon={<FaRobot />}
