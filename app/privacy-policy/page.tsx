@@ -106,8 +106,8 @@ export default function PrivacyPolicy() {
                 <p>If you have any questions about this Privacy Policy, please contact us at:</p>
                 <address>
                   DARE Centre<br />
-                  Email: privacy@darecentre.in<br />
-                  Phone: +91 XXXXXXXXXX
+                  Email: learn@darecentre.in<br />
+                  Phone: +91 78128 76787 | 04566 359495
                 </address>
               </section>
             </div>
