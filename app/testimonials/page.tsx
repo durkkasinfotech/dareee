@@ -14,7 +14,7 @@ interface Testimonial {
     date: string
     image: string
     isVerified: boolean
-    category: 'Student' | 'Professional' | 'Parent'
+    category: 'Student' | 'Intern' | 'Professional' | 'Parent'
 }
 
 // Google "G" Logo SVG Component
@@ -30,96 +30,228 @@ const GoogleGLogo = () => (
 const testimonials: Testimonial[] = [
     {
         id: 1,
-        name: "Saju .B",
+        name: "Saju B",
         role: "Student",
-        content: "I had a great experience at Durkkas Academy! The teaching methods are clear, practical, and easy to understand. The teachers are very supportive and patient — they make sure every student gets proper guidance. I highly recommend DARE for anyone looking to learn new skills.",
+        content: "I had a great experience at Durkkas Academy! The teaching methods are clear, practical, and easy to understand. The teachers are very supportive and give personal attention. Friendly and motivating environment. Highly recommended!",
         rating: 5,
-        date: "1 month ago",
-        image: "https://images.unsplash.com/photo-1544717297-fa95b3d09204?w=400&q=80",
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Saju+B&background=204572&color=fff",
         isVerified: true,
         category: "Student"
     },
     {
         id: 2,
-        name: "Muthu Pandian",
-        role: "Parent",
-        content: "Best place to learn Robotics in Aruppukkottai. My son learned a lot about how to build and code robots. Excellent mentor guidance and very systematic approach to teaching complex technology.",
+        name: "Saravana Krishnan (6C)",
+        role: "Student",
+        content: "🌟 Experience at Durkkas Academy – Value Added Course. The sessions were interactive and helped me improve my communication skills.",
         rating: 5,
-        date: "2 weeks ago",
-        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80",
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Saravana+Krishnan&background=12DCFA&color=fff",
         isVerified: true,
-        category: "Parent"
+        category: "Student"
     },
     {
         id: 3,
-        name: "Sivakumar",
-        role: "Engineering Student",
-        content: "The Artificial Intelligence and Deep Learning courses are very practical. We worked on real-world datasets which helped me understand AI better than my college curriculum. Best for technical career growth.",
+        name: "M. Tamilarasi",
+        role: "Govt Arts & Science College, Thiruchuli",
+        content: "My internship at Durkkas Infotech was a great hands-on experience in Artificial Intelligence using Python and PictoBlox. The 'Smart Dustbin' mini project helped me apply AI concepts in a real-world solution.",
         rating: 5,
-        date: "3 months ago",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+        date: "1 week ago",
+        image: "https://ui-avatars.com/api/?name=Tamilarasi&background=204572&color=fff",
         isVerified: true,
-        category: "Student"
+        category: "Intern"
     },
     {
         id: 4,
-        name: "Devi Shri",
-        role: "Language Learner",
-        content: "Learned German A1 here at DARE School of Languages. The classes are very interactive with a focus on LSRW skills. The tutors are highly qualified and make global languages easy for local students.",
+        name: "All In All",
+        role: "Intern",
+        content: "This was my first IT internship, and it was a wonderful learning experience. I gained strong knowledge in AI, robotics, and PictoBlox. The mentors were supportive and guided us well.",
         rating: 5,
-        date: "1 month ago",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
+        date: "6 months ago",
+        image: "https://ui-avatars.com/api/?name=All+In+All&background=12DCFA&color=fff",
+        isVerified: true,
+        category: "Intern"
+    },
+    {
+        id: 5,
+        name: "Manikandan M",
+        role: "AI Intern",
+        content: "Thankful to Durkkas Academy for this amazing internship experience. Learned AI, robotics, and PictoBlox through hands-on project work.",
+        rating: 5,
+        date: "6 months ago",
+        image: "https://ui-avatars.com/api/?name=Manikandan+M&background=204572&color=fff",
+        isVerified: true,
+        category: "Intern"
+    },
+    {
+        id: 6,
+        name: "Gowshika",
+        role: "Intern",
+        content: "My sincere thanks to Durkkas Academy of Research Centre. This internship helped me gain valuable IT and AI knowledge.",
+        rating: 5,
+        date: "6 months ago",
+        image: "https://ui-avatars.com/api/?name=Gowshika&background=12DCFA&color=fff",
+        isVerified: true,
+        category: "Intern"
+    },
+    {
+        id: 7,
+        name: "Pandeeswari P",
+        role: "Intern",
+        content: "The AI-based project at Durkkas DARE Centre is impressive. Practical solution, clean code, and strong real-world application.",
+        rating: 5,
+        date: "6 months ago",
+        image: "https://ui-avatars.com/api/?name=Pandeeswari+P&background=204572&color=fff",
+        isVerified: true,
+        category: "Intern"
+    },
+    {
+        id: 8,
+        name: "Vasanth",
+        role: "Student",
+        content: "Mr. Naveen Prasanth sir’s teaching is very good. Friendly, patient, and useful for my course and knowledge improvement.",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Vasanth&background=12DCFA&color=fff",
         isVerified: true,
         category: "Student"
     },
     {
-        id: 5,
-        name: "Bala Murugan",
-        role: "AI Intern",
-        content: "Completed my internship on AI & Data Science. I got real hands-on experience working on live projects under professional mentors. It was an intensive and very useful learning phase for my career.",
-        rating: 5,
-        date: "5 months ago",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
-        isVerified: true,
-        category: "Professional"
-    },
-    {
-        id: 6,
-        name: "Kavitha R.",
-        role: "Parent",
-        content: "The robotics workshop was amazing for the kids. My daughter developed a great interest in technology and logical thinking after these sessions. Highly appreciate the DARE team for their efforts.",
-        rating: 5,
-        date: "4 months ago",
-        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80",
-        isVerified: true,
-        category: "Parent"
-    },
-    {
-        id: 7,
-        name: "Selvam Ganapathy",
-        role: "Working Professional",
-        content: "Excellent digital skills training hub. I learned Advanced Excel and Python which have been immensely helpful for my office operations. The curriculum is industry-aligned and very effective.",
-        rating: 5,
-        date: "2 months ago",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-        isVerified: true,
-        category: "Professional"
-    },
-    {
-        id: 8,
-        name: "Anitha S.",
-        role: "Career Professional",
-        content: "Great environment and the best mentors for students in Aruppukkottai. They provide continuous support even after course completion. Truly bridging the gap between local education and global standards.",
+        id: 9,
+        name: "Sankareswari",
+        role: "Intern",
+        content: "I am proud to join Durkkas DARE Centre for internship. Learned AI, AI programming, and its applications. Very useful for my future.",
         rating: 5,
         date: "6 months ago",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80",
+        image: "https://ui-avatars.com/api/?name=Sankareswari&background=204572&color=fff",
+        isVerified: true,
+        category: "Intern"
+    },
+    {
+        id: 10,
+        name: "Selvam Theva",
+        role: "Student",
+        content: "The course enhanced my technical and professional skills and prepared me for better career opportunities.",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Selvam+Theva&background=12DCFA&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 11,
+        name: "Rabik Humayun",
+        role: "Student",
+        content: "Mr. Naveen Prasanth sir teaching is very good. Very good company ❤️",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Rabik+Humayun&background=204572&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 12,
+        name: "Nithish",
+        role: "Student",
+        content: "This class is very useful for my studies. The classes are nice and easy to understand.",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Nithish&background=12DCFA&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 13,
+        name: "Suman Kumawat",
+        role: "Student",
+        content: "Very useful session! Fantastic 😊 Excellent 👌👍",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Suman+Kumawat&background=204572&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 14,
+        name: "Aru Mugam",
+        role: "Student",
+        content: "Great place for learning advanced technologies in Aruppukottai.",
+        rating: 5,
+        date: "5 months ago",
+        image: "https://ui-avatars.com/api/?name=Aru+Mugam&background=12DCFA&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 15,
+        name: "Aswin Raj",
+        role: "Student",
+        content: "Very useful course, especially for higher studies.",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Aswin+Raj&background=204572&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 16,
+        name: "MADHAN TRADERS",
+        role: "Local Guide",
+        content: "Very nice staff and unique teaching methods. Everyone should experience this.",
+        rating: 5,
+        date: "1 year ago",
+        image: "https://ui-avatars.com/api/?name=Madhan+Traders&background=12DCFA&color=fff",
         isVerified: true,
         category: "Professional"
+    },
+    {
+        id: 17,
+        name: "Baskar Baskar",
+        role: "Student",
+        content: "Super explanation class for everyday learning.",
+        rating: 5,
+        date: "1 week ago",
+        image: "https://ui-avatars.com/api/?name=Baskar+Baskar&background=204572&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 18,
+        name: "Vijaya Kumar Alagurajan",
+        role: "Professional",
+        content: "Advanced technology learning centre in Aruppukottai.",
+        rating: 5,
+        date: "1 year ago",
+        image: "https://ui-avatars.com/api/?name=Vijaya+Kumar&background=12DCFA&color=fff",
+        isVerified: true,
+        category: "Professional"
+    },
+    {
+        id: 19,
+        name: "Athava Rajan",
+        role: "Student",
+        content: "Excellent.",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Athava+Rajan&background=204572&color=fff",
+        isVerified: true,
+        category: "Student"
+    },
+    {
+        id: 20,
+        name: "Samsudeen Samsu",
+        role: "Student",
+        content: "Always good.",
+        rating: 5,
+        date: "2 months ago",
+        image: "https://ui-avatars.com/api/?name=Samsudeen+Samsu&background=12DCFA&color=fff",
+        isVerified: true,
+        category: "Student"
     }
 ]
 
 export default function TestimonialsPage() {
-    const [filter, setFilter] = useState<'All' | 'Student' | 'Professional' | 'Parent'>('All')
+    const [filter, setFilter] = useState<'All' | 'Student' | 'Intern' | 'Professional' | 'Parent'>('All')
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
@@ -135,9 +267,9 @@ export default function TestimonialsPage() {
     return (
         <div className="testimonials-page" style={{ background: '#fcfdfe', minHeight: '100vh', paddingBottom: '100px' }}>
             <HeroSection
-                tagline="WALL OF LOVE • STUDENT SUCCESS"
-                title="Hear it from our <span style='color: #dc2626'>Global</span> Community"
-                description="Real stories from real learners based on Google Reviews. Explore how DARE Centre is transforming lives in Aruppukkottai through innovation and personalized mentorship."
+                tagline="STUDENT & INTERN FEEDBACK • DARE ACADEMY"
+                title="Hear it from our <span style='color: #204572'>Global</span> Community"
+                description="Durkkas Academy has consistently received positive feedback for its quality teaching, hands-on learning approach, and supportive mentoring environment. Explore real stories from our verified community."
                 backgroundType="gradient"
                 customMedia={
                     <div className="google-rating-card" style={{
@@ -160,7 +292,7 @@ export default function TestimonialsPage() {
                         <div style={{ color: '#64748b', fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>Based on Verified Community Reviews</div>
 
                         <a
-                            href="https://search.google.com/local/writereview?placeid=0x3b01311784863fc9:0x5589fd70c1be2b38"
+                            href="https://www.google.com/search?sca_esv=50ca057078add2eb&sxsrf=AE3TifM5JtVEf_Uzw6N8E19VTPV_pMLi1w:1767336901651&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E27hUWyOKXEv9LOqcyXOvDP8G_dK0BYEZUupJTrKjyIk4i1T5ceyV19219WhHvdsfTRhmT8WgPSiP281tCvsuNgLDCdEFUTIQo3bVy0gFplORwUrOSDYzepFIB5-El9OVCQTTMEp9gbstSyGKn2WN69U3aDCI4JlNz3R3mVARqO7miLia-Va3MKnQoGSCF9_8KG7lVs%3D&q=Durkkas+Academy+of+Research+and+Education+%28A+Division+of+Durkkas+Innovations+Pvt.+Ltd%29+Reviews&sa=X&ved=2ahUKEwi0puKBo-yRAxWrzTgGHdp7OF0Q0bkNegQIIBAE&biw=1024&bih=607&dpr=1#lrd=0x3b01311784863fc9:0x5589fd70c1be2b38,1,,,,"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
@@ -235,7 +367,7 @@ export default function TestimonialsPage() {
 
             {/* Filter Tabs */}
             <div style={{ maxWidth: '1280px', margin: '0 auto 40px', padding: '0 24px', display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                {['All', 'Student', 'Professional', 'Parent'].map((cat) => (
+                {['All', 'Student', 'Intern', 'Professional', 'Parent'].map((cat) => (
                     <button
                         key={cat}
                         onClick={() => setFilter(cat as any)}
@@ -243,13 +375,13 @@ export default function TestimonialsPage() {
                             padding: '10px 24px',
                             borderRadius: '50px',
                             border: '1px solid #e2e8f0',
-                            background: filter === cat ? '#dc2626' : '#ffffff',
+                            background: filter === cat ? '#204572' : '#ffffff',
                             color: filter === cat ? '#ffffff' : '#475569',
                             fontWeight: '800',
                             fontSize: '14px',
                             cursor: 'pointer',
                             transition: 'all 0.3s ease',
-                            boxShadow: filter === cat ? '0 8px 16px rgba(220, 38, 38, 0.2)' : 'none'
+                            boxShadow: filter === cat ? '0 8px 16px rgba(32, 69, 114, 0.2)' : 'none'
                         }}
                     >
                         {cat}
@@ -278,7 +410,7 @@ export default function TestimonialsPage() {
                             onMouseEnter={e => {
                                 e.currentTarget.style.transform = 'translateY(-10px)'
                                 e.currentTarget.style.boxShadow = '0 30px 60px rgba(15, 23, 42, 0.1)'
-                                e.currentTarget.style.borderColor = '#dc2626'
+                                e.currentTarget.style.borderColor = '#204572'
                             }}
                             onMouseLeave={e => {
                                 e.currentTarget.style.transform = 'translateY(0)'
@@ -286,7 +418,7 @@ export default function TestimonialsPage() {
                                 e.currentTarget.style.borderColor = '#e2e8f0'
                             }}
                         >
-                            <FaQuoteLeft size={40} style={{ position: 'absolute', top: '20px', right: '40px', opacity: 0.05, color: '#dc2626' }} />
+                            <FaQuoteLeft size={40} style={{ position: 'absolute', top: '20px', right: '40px', opacity: 0.05, color: '#204572' }} />
 
                             <div style={{ display: 'flex', gap: '4px', marginBottom: '20px' }}>
                                 {[...Array(t.rating)].map((_, i) => <FaStar key={i} color="#FFD700" size={16} />)}
